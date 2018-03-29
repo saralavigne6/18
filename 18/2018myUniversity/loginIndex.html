@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>登录进去的主页</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="row">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Brand"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <!-- <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>-->
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="搜索">
+                </div>
+                <button type="submit" class="btn btn-default">查询</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="loginIndex.html">主页</a></li>
+                <li><a href="news.html">消息<span>(10)</span></a></li>
+                <li><a href="ownPage.html">我</a></li>
+                <li class="dropdown" id="down">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发文<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="writeArticle.html">发帖子</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="writeArticle.html">草稿箱</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" id="down">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">拥护账户管理</a></li>
+                        <li><a href="#">个人信息增删改查</a></li>
+                        <li><a href="#">教学工作增删改查</a></li>
+                        <li><a href="#">科研工作增删改查</a></li>
+                        <li><a href="#">学术交流增删改查</a></li>
+                        <li><a href="#">活动获奖增删改查</a></li>
+                        <li><a href="#">经验分享增删改查</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">退出登录</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </div>
+</nav>
+
+<div class="clearfix"></div>
+
+<div class="container" style="width:97%;" >
+    <div class="row">
+
+        <div class="col-md-9 main-content" style="padding-right:5px;">
+            <article class="post-head" id="post-head">
+                <div class="post-head-title" id="post-head-title">
+                    <a onclick="input()">发文章、照片或动态</a>
+                </div>
+                <div style="display:none;" id="post-head-title1" class="post-head-title post-head-title1" contenteditable="true" aria-multiline="true">
+                    <p id="p"></p>
+                </div>
+
+
+
+                <div class="post-head-bottom">
+                    <ul>
+
+                        <li>
+                            <div>
+                                <label>
+                                    <span class="glyphicon glyphicon-picture"></span>
+                                    <span type="file" accept="image/*">发照片</span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="post-head-button">
+                        <p><a class="btn btn-primary" href="#" role="button">&nbsp;&nbsp;&nbsp;  发布  &nbsp;&nbsp;&nbsp;</a></p>
+                    </div>
+                </div>
+            </article>
+            <div class="clearfix"></div>
+            <div class="line">
+                <hr>
+                <!--下拉按钮-->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        排列方式
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                        <li><a href="#">热门</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">最新</a></li>
+                    </ul>
+                </div>
+                <!--下拉按钮结束-->
+            </div>
+            <div class="clearfix"></div>
+
+            <article class="post">
+                <div class="post-head1">
+                    <div class="image">
+                        <a><img src="img/7.png" alt="头像"></a>
+                    </div>
+                    <div class="information">
+                        <a class="username">Jocelyn</a>
+                        <a class="introduce">重庆工商大学 计算机科学与技术专业副教授</a>
+                        <a class="time">5小时前发布</a>
+                    </div>
+                    <div class="right-btn">
+                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left"
+                            data-content="<div class='data'><ul>
+                            <li><span class='glyphicon glyphicon-search' aria-hidden='true'></span>&nbsp;&nbsp;删除</li>
+                            <li><span class='glyphicon glyphicon-alert' aria-hidden='true'></span>&nbsp;&nbsp;隐藏</li>
+                            </ul>
+                            </div>" data-html="true">
+                       ···
+                    </button>
+                    </div>
+
+                </div>
+                <div class="post-content">
+                    <div class="text"><p>今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                    </p></div>
+                    <!-- <div class="button">
+                         <p><a class="btn btn-primary" href="#" role="button">阅读全文</a></p>
+                     </div>-->
+                    <div class="img">
+                        <a><img src="img/post1.jpg"></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                </div>
+                <div class="share">
+
+                    <div class="button">
+                        <p><a class="btn btn-primary" href="readArticle.html" role="button">阅读全文</a></p>
+                    </div>
+
+                    <div class="post-share">
+                        <ul>
+                            <li><a type="button" data-toggle="modal" data-target="#like">赞（3,705） </a></li>
+                            <li>&nbsp;&nbsp;</li>
+                            <li>评论（157）</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="post-button">
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-head1">
+                    <div class="image">
+                        <a><img src="img/7.png" alt="头像"></a>
+                    </div>
+                    <div class="information">
+                        <a class="username">Jocelyn</a>
+                        <a class="introduce">重庆工商大学 计算机科学与技术专业副教授</a>
+                        <a class="time">5小时前发布</a>
+                    </div>
+                    <div class="right-btn">
+                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left"
+                                data-content="<div class='data'><ul>
+                            <li><span class='glyphicon glyphicon-search' aria-hidden='true'></span>&nbsp;&nbsp;删除</li>
+                            <li><span class='glyphicon glyphicon-alert' aria-hidden='true'></span>&nbsp;&nbsp;隐藏</li>
+                            </ul>
+                            </div>" data-html="true">
+                            ···
+                        </button>
+                    </div>
+
+                </div>
+                <div class="post-content">
+                    <div class="text"><p>今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                    </p></div>
+                    <!-- <div class="button">
+                         <p><a class="btn btn-primary" href="#" role="button">阅读全文</a></p>
+                     </div>-->
+                    <div class="img"  style="display:none;">
+                        <a><img src="img/post1.jpg"></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                </div>
+                <div class="share">
+
+                    <div class="button">
+                        <p><a class="btn btn-primary" href="#" role="button">阅读全文</a></p>
+                    </div>
+
+                    <div class="post-share">
+                        <ul>
+                            <li><a type="button" data-toggle="modal" data-target="#like">赞（3,705） </a></li>
+                            <li>&nbsp;&nbsp;</li>
+                            <li>评论（157）</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="post-button">
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-head1">
+                    <div class="image">
+                        <a><img src="img/7.png" alt="头像"></a>
+                    </div>
+                    <div class="information">
+                        <a class="username">Jocelyn</a>
+                        <a class="introduce">重庆工商大学 计算机科学与技术专业副教授</a>
+                        <a class="time">5小时前发布</a>
+                    </div>
+                    <div class="right-btn">
+                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left"
+                                data-content="<div class='data'><ul>
+                            <li><span class='glyphicon glyphicon-search' aria-hidden='true'></span>&nbsp;&nbsp;删除</li>
+                            <li><span class='glyphicon glyphicon-alert' aria-hidden='true'></span>&nbsp;&nbsp;隐藏</li>
+                            </ul>
+                            </div>" data-html="true">
+                            ···
+                        </button>
+                    </div>
+
+                </div>
+                <div class="post-content">
+                    <div class="text"><p>今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                    </p></div>
+                    <!-- <div class="button">
+                         <p><a class="btn btn-primary" href="#" role="button">阅读全文</a></p>
+                     </div>-->
+                    <div class="img">
+                        <a><img src="img/post1.jpg"></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                </div>
+                <div class="share">
+
+                    <div class="button">
+                        <p><a class="btn btn-primary" href="#" role="button">阅读全文</a></p>
+                    </div>
+
+                    <div class="post-share">
+                        <ul>
+                            <li><a type="button" data-toggle="modal" data-target="#like">赞（3,705） </a></li>
+                            <li>&nbsp;&nbsp;</li>
+                            <li>评论（157）</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="post-button">
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-head1">
+                    <div class="image">
+                        <a><img src="img/7.png" alt="头像"></a>
+                    </div>
+                    <div class="information">
+                        <a class="username">Jocelyn</a>
+                        <a class="introduce">重庆工商大学 计算机科学与技术专业副教授</a>
+                        <a class="time">5小时前发布</a>
+                    </div>
+                    <div class="right-btn">
+                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left"
+                                data-content="<div class='data'><ul>
+                            <li><span class='glyphicon glyphicon-search' aria-hidden='true'></span>&nbsp;&nbsp;删除</li>
+                            <li><span class='glyphicon glyphicon-alert' aria-hidden='true'></span>&nbsp;&nbsp;隐藏</li>
+                            </ul>
+                            </div>" data-html="true">
+                            ···
+                        </button>
+                    </div>
+
+                </div>
+                <div class="post-content">
+                    <div class="text"><p>今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                    </p></div>
+                    <!-- <div class="button">
+                         <p><a class="btn btn-primary" href="#" role="button">阅读全文</a></p>
+                     </div>-->
+                    <div class="img">
+                        <a><img src="img/post1.jpg"></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                </div>
+                <div class="share">
+
+                    <div class="button">
+                        <p><a class="btn btn-primary" href="#" role="button">阅读全文</a></p>
+                    </div>
+
+                    <div class="post-share">
+                        <ul>
+                            <li><a type="button" data-toggle="modal" data-target="#like">赞（3,705） </a></li>
+                            <li>&nbsp;&nbsp;</li>
+                            <li>评论（157）</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="post-button">
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+
+                </div>
+            </article>
+
+        </div>
+
+
+
+        <div class="col-md-3" style="padding-right: 0px;">
+            <div class="aside aside1" id="side">
+                <div class="border">
+                    <div class="border-top">
+                        <div class="top-img"></div>
+                        <a><img class="ghost-person" width="64px" height="64px"/></a>
+                        <a class="welcome">zhangq,欢迎使用powerTch</a>
+                        <a class="uploadPic" type="button" data-toggle="modal" data-target="#upload-img">上传照片</a>
+                    </div>
+                    <div class="border-center">
+                        <a class="icon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                        <a class="fill-info" type="button" data-toggle="modal" data-target="#personal-info">完善个人资料</a>
+                    </div>
+                    <div class="border-bottom">
+                        <a class="wel">欢迎你的到来</a>
+                        <a class="wel1"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>&nbsp;请尽情使用吧</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.goup.min.js"></script>
+<!--<script src="js/bootstrap1.min.js"></script>-->
+<script src="js/npm.js"></script>
+
+
+
+
+<script>
+    $(function () {
+     dd();//点击隐藏一个post-head-title1,显示post-head-title
+    });
+
+
+
+
+
+    //模态框弹出
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    });
+
+    //右侧的板块特效
+    $(window).scroll(function ()
+    {
+        var st = $(this).scrollTop();
+       // console.log(st);
+        if(st>=100){
+            document.getElementById("side").style.marginTop= "0px";
+        }else {
+            document.getElementById("side").style.marginTop= "8px";
+        }
+    });
+
+
+  //返回顶部
+    $(document).ready(function () {
+        $.goup({
+            trigger: 100,
+            bottomOffset: 30,  //距底部偏移量
+            locationOffset: 30,//距右边偏移量
+            title: 'This is a Demo',
+            titleAsText: false  //是否显示title
+        });
+    });
+//点击头部输入框时的显示和隐藏post-head-title和post-head-title1
+function input(){
+    document.getElementById("post-head-title").style.display="none";
+    document.getElementById("post-head-title1").style.display="block";
+    document.getElementById("p").innerHTML="发布你的动态~";
+    document.getElementById("post-head").style.boxShadow="2px 8px 8px #909090";
+}
+
+
+//点击区域之外，一个post-head-title隐藏，一个显示
+    function dd(){
+        document.onmouseup = function(e){
+            var e = e || window.event;
+            var target = e.target || e.srcElement;
+            var _tar =document.getElementById("post-head");
+            //1. 点击事件的对象不是目标区域本身
+            //2. 事件对象同时也不是目标区域的子元素
+            if( !(target == _tar) && ! _tar.contains(target) ){
+            //   var p = document.getElementById("p").innerText;
+               var html = $("#p").html();
+              // console.log(p);
+               console.log(html);
+               if(html== "<br>"){
+                    document.getElementById("post-head-title").style.display="block";
+                    document.getElementById("post-head-title1").style.display="none";
+                   document.getElementById("post-head").style.boxShadow="0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2)";
+                }
+                if(html=="发布你的动态~"){
+                    document.getElementById("post-head-title").style.display="block";
+                    document.getElementById("post-head-title1").style.display="none";
+                    document.getElementById("post-head").style.boxShadow="0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2)";
+                }
+                if(html==undefined){
+                    document.getElementById("post-head-title").style.display="block";
+                    document.getElementById("post-head-title1").style.display="none";
+                    document.getElementById("post-head").style.boxShadow="0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2)";
+                }
+
+            }
+        }
+    }
+
+
+</script>
+<!--class模态框开始-->
+<div class="modal fade" id="upload-img" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">编辑自我简介</h4>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="bg">
+                    <div class="background-img"></div>
+                    <div class="right-button">
+                        <div class="suggest">建议尺寸：600px · 200px</div>
+                        <span class="right-btn profile-background-image-edit-button__edit-icon profile-background-image-edit-button__edit-icon--upload svg-icon-wrap"><li-icon aria-hidden="true" type="pencil-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M14.71,4L12,1.29a1,1,0,0,0-1.41,0L3,8.85,1,15l6.15-2,7.55-7.55A1,1,0,0,0,15,4.71,1,1,0,0,0,14.71,4Zm-8.84,7.6-1.5-1.5L9.42,5.07l1.5,1.5Zm5.72-5.72-1.5-1.5,1.17-1.17,1.5,1.5Z" class="small-icon" style="fill-opacity: 1"></path></svg></li-icon></span>
+                        <input type="file" id="top-card-form-background-image-edit-upload-input" accept="image/*" class="profile-background-image-edit-button__upload">
+                    </div>
+
+
+                    <div class="img-title pe-form-field pe-top-card-form__photo-field pe-top-card-form__photo-field--floating pe-top-card-form__photo-wrapper  EntityPhoto-circle-8">
+                        <div id="ember3515" class="inner-img-titile pe-top-card-form__photo profile-photo-edit--large-preview profile-photo-edit ember-view">  <div class="profile-photo-edit__camera-plus"></div>
+                            <input type="file" id="top-card-form-edit-upload-input" accept="image/*" class="profile-photo-edit__file-upload-input">
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">姓名：</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">职业头衔：</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">自我介绍：</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--class模态框结束-->
+<!--点赞模态框开始-->
+<div class="modal fade" id="like" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel1">赞（1273）</h4>
+            </div>
+
+            <div class="modal-body">
+                <ul>
+                    <li class="actor-item">
+                        <a>
+                            <div class="like-image">
+                                <div>
+                                    <img src="img/7.png">
+                                </div>
+                            </div>
+                            <div class="like-info">
+                                <h3>杨艺</h3>
+                                <p>重庆工商大学-副教授</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="actor-item">
+                        <a>
+                            <div class="like-image">
+                                <div>
+                                    <img src="img/7.png">
+                                </div>
+                            </div>
+                            <div class="like-info">
+                                <h3>杨艺</h3>
+                                <p>重庆工商大学-副教授</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="actor-item">
+                        <a>
+                            <div class="like-image">
+                                <div>
+                                    <img src="img/7.png">
+                                </div>
+                            </div>
+                            <div class="like-info">
+                                <h3>杨艺</h3>
+                                <p>重庆工商大学-副教授</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="actor-item">
+                        <a>
+                            <div class="like-image">
+                                <div>
+                                    <img src="img/7.png">
+                                </div>
+                            </div>
+                            <div class="like-info">
+                                <h3>杨艺</h3>
+                                <p>重庆工商大学-副教授</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="actor-item">
+                        <a>
+                            <div class="like-image">
+                                <div>
+                                    <img src="img/7.png">
+                                </div>
+                            </div>
+                            <div class="like-info">
+                                <h3>杨艺</h3>
+                                <p>重庆工商大学-副教授</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="actor-item">
+                        <a>
+                            <div class="like-image">
+                                <div>
+                                    <img src="img/7.png">
+                                </div>
+                            </div>
+                            <div class="like-info">
+                                <h3>杨艺</h3>
+                                <p>重庆工商大学-副教授</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="actor-item">
+                        <a>
+                            <div class="like-image">
+                                <div>
+                                    <img src="img/7.png">
+                                </div>
+                            </div>
+                            <div class="like-info">
+                                <h3>杨艺</h3>
+                                <p>重庆工商大学-副教授</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="actor-item">
+                        <a>
+                            <div class="like-image">
+                                <div>
+                                    <img src="img/7.png">
+                                </div>
+                            </div>
+                            <div class="like-info">
+                                <h3>杨艺</h3>
+                                <p>重庆工商大学-副教授</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--点赞模态框结束 personal-info-->
+
+<!--弹出的框，编辑个人信息开始                 -->
+<div class="modal fade" id="personal-info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">编辑个人信息</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">地址</label>
+                        <input type="text" class="form-control" id="work-address">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">电话</label>
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">Email</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">微信公众号号</label>
+                        <input type="text" class="form-control" id="we-account">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">新浪微博</label>
+                        <input type="text" class="form-control" id="sin-account">
+                    </div>
+
+
+                </form>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，编辑个人信息结束-->
+
+
+<!--回到顶部开始-->
+<!--<div style="position: fixed; width: 40px; height: 40px; background: rgb(0, 0, 0); cursor: pointer; bottom: 40px; right:50px; border-radius: 10px; display: block;" class="goup-container">
+    <div class="goup-arrow" style="width: 0px; height: 0px; margin: 0px auto; padding-top: 13px; border-style: solid; border-width: 0px 10px 10px; border-color: transparent transparent rgb(255, 255, 255);">
+
+    </div>
+</div>-->
+
+<!--回到顶部结束-->
+
+</body>
+</html>

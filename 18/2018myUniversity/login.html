@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>Teacher personal information management system
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <link rel="stylesheet" type="text/css" href="css/normalize1.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <style>
+        #slide_box {
+            width: 89.6%;
+            height: 42px;
+            text-align: center;
+            line-height: 42px;
+            font-size: 14px;
+
+            background-color: #d8d7d7;
+            border: none;
+            margin-bottom: 20px;
+            margin-left:25px;
+        }
+
+        #slide_xbox {
+            width: 50px;
+            height: 42px;
+            text-align: center;
+            line-height: 42px;
+            font-size: 16px;
+            color: #fff;
+            position: absolute;
+            background: #35b34a;
+        }
+
+        #button {
+            cursor: pointer;
+            width: 50px;
+            height: 42px;
+            background-color: #fff;
+            float: right;
+            -webkit-box-shadow: 0px 0px 15px 0px #ddd;
+            -moz-box-shadow: 0px 0px 15px 0px #ddd;
+            box-shadow: 0px 0px 15px 0px #ddd;
+            color: #8a8c97;
+
+        }
+
+        #button > .iconfont {
+            font-size: 20px;
+        }
+    </style>
+
+
+</head>
+<body style="min-width: 1128px;margin-top:0px;">
+<!--[if lte IE8]>
+<p class="browserupgrade">您的浏览器版本已经去世了，请到<a href="http://browsehappy.com">这里</a>更新，升级装备再来打怪赚钱!</p>
+<![endif]-->
+<!--头部-->
+<div class="header">
+    <div class="wrapper">
+        <h1>
+            <img class="logo" alt="教师信息管理系统" src="img/logo.png">
+        </h1>
+        <form class="login-form" action="" method="post">
+            <a href="loginIndex.html"><input type="submit" id="btn" class="login-submit" value="马上加入"/></a>
+
+        </form>
+    </div>
+</div>
+
+<div class="main background">
+    <form class="reg-form" action="" method="post" style="text-align: center;">
+        <!--<h2 class="title">在这里,连接世界</h2>-->
+        <!--<h3 class="subtitle">立即免费注册</h3>-->
+        <!--<label class="reg-realName">真实姓名</label>-->
+        <!--<input type="text" name="realName" id="realName" class="realName">-->
+
+        <!--<label class="reg-foreignName">教师ID（教师必填写）</label>-->
+        <!--<input type="text" name="foreignName" id="foreignName" class="foreignName">-->
+        <br><br><br>
+        <a style="text-align: center;"><img src="img/login-logo.png"></a>
+        <br><br><br>
+        <input type="text" name="email" id="email" class="email" placeholder="输入手机号码">
+        <br>
+        <input type="password" name="password" id="password" class="password" placeholder="输入密码">
+        <br>
+        <!--向右滑动验证码-->
+        <div id="slide_box">
+            <div id="slide_xbox">
+                <div id="button">
+                    <i class="iconfont icon-double-right"></i>
+                    <img src="" alt="">
+                </div>
+            </div>
+            请按住滑块，拖动到最右边
+        </div>
+
+         <br>
+
+        <!--<span class="agreement">点击“立即加入”，即表示您同意遵守powerTch的<a href="">《用户协议》</a>、<a href="">《隐私政策》</a>及<a href="">《Cookie 政策》</a>。</span>-->
+        <input id="reg-submit" class="submit-button" type="submit" value="立即登录">
+        <span class="agreement" style="font-size:1.5rem;"> <a href="" style="color:#0084bf;">忘记密码？</a>&nbsp;<a href="">或以下第三方登录</a></span>
+        <img class="login-logo" src="img/wechat.png">  <img class="login-logo login-logo2" src="img/QQ.png">  <img class="login-logo" src="img/weibo.png">
+        <br><br>
+
+
+
+    </form>
+</div>
+
+<div class="meter">
+    <form class="same-name-search" method="GET" action="">
+        <h3 class="title">查找教师</h3>
+        <input type="text" name="last" placeholder="姓">
+        <input type="text" name="first" placeholder="名">
+        <input type="submit" class="submit-btn" name="search" value="搜索" disabled="">
+    </form>
+    <div class="directory">
+        <h3 class="title">教师学院目录:</h3>
+        <ol style="margin-top:21px;">
+            <li><a href="">A</a></li>
+            <li><a href="">B</a></li>
+            <li><a href="">C</a></li>
+            <li><a href="">D</a></li>
+            <li><a href="">A</a></li>
+            <li><a href="">B</a></li>
+            <li><a href="">C</a></li>
+            <li><a href="">D</a></li>
+            <li><a href="">A</a></li>
+            <li><a href="">B</a></li>
+            <li><a href="">C</a></li>
+            <li><a href="">D</a></li>
+            <li><a class="more" href="">更多</a></li>
+            <li><a class="more1">|</a></li>
+            <li class="school-search"><a href="">按学院浏览</a></li>
+        </ol>
+    </div>
+
+    <div class="legal-nav">
+        <div class="copyright" style="margin-top:-10px;">
+            <img style="width:100px;" class="logo-copyright lazy-loaded" alt="教师信息管理网站" src="img/bottom-logo.png"> © 2018
+        </div>
+        <ul>
+            <li><a href="">用户协议</a></li>
+            <li><a href="">隐私政策</a></li>
+            <li><a href="">社区准则</a></li>
+            <li><a href="">Cookie 政策</a></li>
+            <li><a href="">版权政策</a></li>
+            <li><a href="">访客设置</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+<script src="js/jquery-1.9.1.js"></script>
+<!--<script src="js/bootstrap1.min.js"></script>-->
+<script src="js/bootstrap.js"></script>
+
+<!--<script src="js/npm.js"></script>-->
+<script>
+    
+    var locked;
+    window.onload = function () {
+        slide();
+        //禁止F12
+        // $("*").keydown(function (e) {//判断按键
+        //     e = window.event || e || e.which;
+        //     if (e.keyCode == 123) {
+        //         e.keyCode = 0;
+        //         return false;
+        //     }
+        // });
+        //禁止审查元素
+        // $(document).bind("contextmenu",function(e){
+        //     return false;
+        // });
+    }
+
+
+    window.onresize = function () {
+        if(locked==true){
+            var boxWidth = $('#slide_box').width();
+            $('#slide_xbox').width(boxWidth);
+        }else{
+            slide();
+        }
+    }
+    //滑动解锁移动
+    function slide() {
+        var slideBox = $('#slide_box')[0];
+        var slideXbox = $('#slide_xbox')[0];
+        var btn = $('#button')[0];
+        var slideBoxWidth = slideBox.offsetWidth;
+        var btnWidth = btn.offsetWidth;
+        //pc端
+        btn.ondragstart = function () {
+            return false;
+        };
+        btn.onselectstart = function () {
+            return false;
+        };
+        btn.onmousedown = function (e) {
+            var disX = e.clientX - btn.offsetLeft;
+            document.onmousemove = function (e) {
+                var objX = e.clientX - disX + btnWidth;
+                if (objX < btnWidth) {
+                    objX = btnWidth
+                }
+                if (objX > slideBoxWidth) {
+                    objX = slideBoxWidth
+                }
+                $('#slide_xbox').width(objX + 'px');
+            };
+            document.onmouseup = function (e) {
+                var objX = e.clientX - disX + btnWidth;
+                if (objX < slideBoxWidth) {
+                    objX = btnWidth;
+                } else {
+                    objX = slideBoxWidth;
+                    locked = true;
+                    $('#slide_xbox').html('验证通过<div id="btn"><i class="iconfont icon-xuanzhong" style="color: #35b34a;"></i></div>');
+                }
+                $('#slide_xbox').width(objX + 'px');
+                document.onmousemove = null;
+                document.onmouseup = null;
+            };
+        };
+        //移动端
+        var cont = $("#button");
+        var startX = 0, sX = 0, moveX = 0,leftX = 0;
+        cont.on({//绑定事件
+            touchstart: function (e) {
+                startX = e.originalEvent.targetTouches[0].pageX;//获取点击点的X坐标
+                sX = $(this).offset().left;//相对于当前窗口X轴的偏移量
+                leftX = startX - sX;//鼠标所能移动的最左端是当前鼠标距div左边距的位置
+            },
+            touchmove: function (e) {
+                e.preventDefault();
+                moveX = e.originalEvent.targetTouches[0].pageX;//移动过程中X轴的坐标
+                var objX = moveX - leftX + btnWidth;
+                if (objX < btnWidth) {
+                    objX = btnWidth
+                }
+                if (objX > slideBoxWidth) {
+                    objX = slideBoxWidth
+                }
+                $('#slide_xbox').width(objX + 'px');
+            },
+            touchend: function (e) {
+                var objX = moveX - leftX + btnWidth;
+                if (objX < slideBoxWidth) {
+                    objX = btnWidth;
+                } else {
+                    objX = slideBoxWidth;
+                    locked = true;
+                    $('#slide_xbox').html('验证通过<div id="button"><i class="iconfont icon-xuanzhong" style="color: #35b34a;"></i></div>');
+                }
+                $('#slide_xbox').width(objX + 'px');
+            }
+        });
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

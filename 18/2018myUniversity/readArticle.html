@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>登录进去的主页</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="row">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Brand"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- <ul class="nav navbar-nav">
+                     <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                     <li><a href="#">Link</a></li>
+                     <li class="dropdown">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                         <ul class="dropdown-menu">
+                             <li><a href="#">Action</a></li>
+                             <li><a href="#">Another action</a></li>
+                             <li><a href="#">Something else here</a></li>
+                             <li role="separator" class="divider"></li>
+                             <li><a href="#">Separated link</a></li>
+                             <li role="separator" class="divider"></li>
+                             <li><a href="#">One more separated link</a></li>
+                         </ul>
+                     </li>
+                 </ul>-->
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="搜索">
+                    </div>
+                    <button type="submit" class="btn btn-default">查询</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="loginIndex.html">主页</a></li>
+                    <li><a href="news.html">消息<span>(10)</span></a></li>
+                    <li><a href="ownPage.html">我</a></li>
+                    <li class="dropdown" id="down">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发文<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="writeArticle.html">发帖子</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="draftBox.html">草稿箱</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="down">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">拥护账户管理</a></li>
+                            <li><a href="#">个人信息增删改查</a></li>
+                            <li><a href="#">教学工作增删改查</a></li>
+                            <li><a href="#">科研工作增删改查</a></li>
+                            <li><a href="#">学术交流增删改查</a></li>
+                            <li><a href="#">活动获奖增删改查</a></li>
+                            <li><a href="#">经验分享增删改查</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">退出登录</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+</nav>
+
+<div class="clearfix"></div>
+
+<div class="container" style="width:97%;">
+    <div class="row">
+
+        <div class="col-md-9 main-content">
+
+
+            <article class="read-post post">
+                <!--阅读全文的头部，包括标题和作者时间-->
+                <header class="post-head">
+                    <h1 class="post-title">主题模板和博客支持本地化了！</h1>
+                    <section class="post-meta">
+                        <span class="author">作者：<a href="/author/wangsai/">王赛</a></span> •
+                        <time class="post-date" datetime="2018年1月22日星期一下午5点03分" title="2018年1月22日星期一下午5点03分">2018年1月22日</time>
+                    </section>
+                </header>
+
+                <div class="post-content">
+                    <div class="text1"><p>今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                        今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里
+                    </p></div>
+                    <!-- <div class="button">
+                         <p><a class="btn btn-primary" href="#" role="button">阅读全文</a></p>
+                     </div>-->
+                    <div class="img">
+                        <a><img src="img/post1.jpg"></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                </div>
+                <div class="share">
+                    <div class="post-share">
+                        <ul>
+                            <li><a type="button" data-toggle="modal" data-target="#like">赞（3,705） </a></li>
+                            <li>&nbsp;&nbsp;</li>
+                            <li>评论（157）</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="post-button">
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+
+                </div>
+            </article>
+
+            <!--评论模块开始-->
+            <article class="read-post post">
+                <div class="commentbox">
+                    <textarea cols="117" rows="5" placeholder="来说几句吧......" class="mytextarea" id="content"></textarea>
+                    <div class="btn btn-primary pull-right" id="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;评论&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                </div>
+                <div class="comment-list">
+
+                </div>
+
+
+
+
+
+                <!--comment开始-->
+               <!-- <div class="comment-info">
+                    <header><img src="./images/img.jpg"></header>
+                    <div class="comment-right">
+                        <h3>匿名</h3>
+                        <div class="comment-content-header"><span><i class="glyphicon glyphicon-time"></i> 2017-10-17 11:42:53</span><span><i class="glyphicon glyphicon-map-marker"></i>深圳</span></div>
+                        <p class="content">mongodb 副本集配置副本集概念：就我的理解就是和主从复制 差不多，就是在主从复制的基础上多加了一个选举的机制。
+                            复制集 特点：数据一致性 主是唯一的，没有Mysql 那样的双主结构大多数原则，集群存活节点小于二分之一是集群不可写，
+                            只可读从库无法写入数据自动容灾通过下面的一个图来简单的了解下
+                            配置过程：一、安装mongodb安装过程略，不懂得可以看前面的教程二、创建存储目录与配置文件创...</p>
+                        <div class="comment-content-footer">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <span><i class="glyphicon glyphicon-pushpin"></i> 来自:win10 </span><span><i class="glyphicon glyphicon-globe"></i> chrome 55.0.2883.87</span>
+                                </div>
+                                <div class="col-md-2"><span class="reply-btn">回复</span></div>
+                            </div>
+                        </div>
+                        <div class="reply-list"></div>
+                    </div>
+                </div>
+
+                <div class="comment-info">
+                    <header><img src="./images/img.jpg"></header>
+                    <div class="comment-right">
+                        <h3>匿名</h3>
+                        <div class="comment-content-header"><span><i class="glyphicon glyphicon-time"></i> 2017-10-17 11:42:53</span><span><i class="glyphicon glyphicon-map-marker"></i>深圳</span></div>
+                        <p class="content">mongodb 副本集配置副本集概念：就我的理解就是和主从复制 差不多，就是在主从复制的基础上多加了一个选举的机制。
+                            复制集 特点：数据一致性 主是唯一的，没有Mysql 那样的双主结构大多数原则，集群存活节点小于二分之一是集群不可写，
+                            只可读从库无法写入数据自动容灾通过下面的一个图来简单的了解下
+                            配置过程：一、安装mongodb安装过程略，不懂得可以看前面的教程二、创建存储目录与配置文件创...</p>
+                        <div class="comment-content-footer">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <span><i class="glyphicon glyphicon-pushpin"></i> 来自:win10 </span><span><i class="glyphicon glyphicon-globe"></i> chrome 55.0.2883.87</span>
+                                </div>
+                                <div class="col-md-2"><span class="reply-btn">回复</span></div>
+                            </div>
+                        </div>
+                        <div class="reply-list">
+                            <div class="reply">
+                                <div><a href="javascript:void(0)">匿名</a>:<a href="javascript:void(0)">@匿名</a><span>这写的是什么鬼东西。。。。</span></div>
+                                <p><span>2017-10-17 11:42:53</span> <span class="reply-list-btn">回复</span></p>
+                            </div>
+                            <div class="reply">
+                                <div><a href="javascript:void(0)">匿名</a>:<a href="javascript:void(0)">@匿名</a><span>这写的是什么鬼东西。。。。</span></div>
+                                <p><span>2017-10-17 11:42:53</span> <span class="reply-list-btn">回复</span></p>
+                            </div>
+                            <div class="reply">
+                                <div><a href="javascript:void(0)">匿名</a>:<a href="javascript:void(0)">@匿名</a><span>这写的是什么鬼东西。。。。</span></div>
+                                <p><span>2017-10-17 11:42:53</span> <span class="reply-list-btn">回复</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!--comment结束-->
+
+
+
+
+
+                <!--<header class="post-head">-->
+
+                <!--</header>-->
+
+                <!--<div class="post-content">-->
+                    <!--<div class="text1"><p>今天很开兴能够来到这里-->
+                        <!--今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里-->
+                        <!--今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里-->
+                        <!--今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里今天很开兴能够来到这里-->
+                    <!--</p></div>-->
+                    <!--&lt;!&ndash; <div class="button">-->
+                         <!--<p><a class="btn btn-primary" href="#" role="button">阅读全文</a></p>-->
+                     <!--</div>&ndash;&gt;-->
+                    <!--<div class="img">-->
+                        <!--<a><img src="img/post1.jpg"></a>-->
+                    <!--</div>-->
+                    <!--<div class="clearfix"></div>-->
+                <!--</div>-->
+            </article>
+         <!--评论模块结束-->
+
+
+        </div>
+
+
+
+        <div class="col-md-3" style="padding:0px;">
+            <div class="aside aside1" id="side">
+                <div class="border">
+                    <div class="border-top">
+                        <div class="top-img"></div>
+                        <a><img class="ghost-person" width="64px" height="64px"/></a>
+                        <a class="welcome">zhangq,欢迎使用powerTch</a>
+                        <a class="uploadPic" type="button" data-toggle="modal" data-target="#upload-img">上传照片</a>
+                    </div>
+                    <div class="border-center">
+                        <a class="icon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                        <a class="fill-info" type="button" data-toggle="modal" data-target="#personal-info1">完善个人资料</a>
+                    </div>
+                    <div class="border-bottom">
+                        <a class="wel">欢迎你的到来</a>
+                        <a class="wel1"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>&nbsp;请尽情使用吧</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.comment.js" ></script>
+
+<script type="text/javascript" src="js/jquery.goup.min.js"></script>
+<!--<script src="js/bootstrap1.min.js"></script>-->
+<script src="js/npm.js"></script>
+
+
+
+
+<script>
+    //模态框弹出
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    });
+
+    $(window).scroll(function ()
+    {
+        var st = $(this).scrollTop();
+        console.log(st);
+        if(st>=100){
+            document.getElementById("side").style.marginTop= "0px";
+        }else {
+            document.getElementById("side").style.marginTop= "8px";
+        }
+    });
+
+    // $('#upload-img').modal(options);
+    //返回顶部
+    $(document).ready(function () {
+        $.goup({
+            trigger: 100,
+            bottomOffset: 30,  //距底部偏移量
+            locationOffset: 30,//距右边偏移量
+            title: 'This is a Demo',
+            titleAsText: false  //是否显示title
+        });
+    });
+
+    //评论模块
+    //初始化数据
+    var arr = [
+        {id:1,img:"img/img.png",replyName:"帅大叔",beReplyName:"匿名",content:"同学聚会，看到当年追我的屌丝开着宝马车带着他老婆来了，他老婆是我隔壁宿舍的同班同学，心里后悔极了。",time:"2017-10-17 11:42:53",address:"深圳",osname:"",browse:"谷歌",replyBody:[]},
+        {id:2,img:"img/img.png",replyName:"匿名",beReplyName:"",content:"到菜市场买菜，看到一个孩子在看摊，我问：“一只鸡多少钱？” 那孩子回答：“23。” 我又问：“两只鸡多少钱？” 孩子愣了一下，一时间没算过来，急中生智大吼一声：“一次只能买一只！”",time:"2017-10-17 11:42:53",address:"深圳",osname:"",browse:"谷歌",replyBody:[{id:3,img:"",replyName:"帅大叔",beReplyName:"匿名",content:"来啊，我们一起吃鸡",time:"2017-10-17 11:42:53",address:"",osname:"",browse:"谷歌"}]},
+        {id:3,img:"img/img.png",replyName:"帅大叔",beReplyName:"匿名",content:"同学聚会，看到当年追我的屌丝开着宝马车带着他老婆来了，他老婆是我隔壁宿舍的同班同学，心里后悔极了。",time:"2017-10-17 11:42:53",address:"深圳",osname:"win10",browse:"谷歌",replyBody:[]}
+    ];
+    $(function(){
+        $(".comment-list").addCommentList({data:arr,add:""});
+        $("#comment").click(function(){
+            var obj = new Object();
+            obj.img="img/img.png";
+            obj.replyName="懒人";
+            obj.content=$("#content").val();
+            obj.browse="深圳";
+            obj.osname="win10";
+            obj.replyBody="";
+            $(".comment-list").addCommentList({data:[],add:obj});
+        });
+    })
+
+</script>
+<!--class上传照片模态框开始-->
+<div class="modal fade" id="upload-img" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">编辑自我简介</h4>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="bg">
+                    <div class="background-img"></div>
+                    <div class="right-button">
+                        <div class="suggest">建议尺寸：600px · 200px</div>
+                        <span class="right-btn profile-background-image-edit-button__edit-icon profile-background-image-edit-button__edit-icon--upload svg-icon-wrap"><li-icon aria-hidden="true" type="pencil-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M14.71,4L12,1.29a1,1,0,0,0-1.41,0L3,8.85,1,15l6.15-2,7.55-7.55A1,1,0,0,0,15,4.71,1,1,0,0,0,14.71,4Zm-8.84,7.6-1.5-1.5L9.42,5.07l1.5,1.5Zm5.72-5.72-1.5-1.5,1.17-1.17,1.5,1.5Z" class="small-icon" style="fill-opacity: 1"></path></svg></li-icon></span>
+                        <input type="file" id="top-card-form-background-image-edit-upload-input" accept="image/*" class="profile-background-image-edit-button__upload">
+                    </div>
+
+
+                    <div class="img-title pe-form-field pe-top-card-form__photo-field pe-top-card-form__photo-field--floating pe-top-card-form__photo-wrapper  EntityPhoto-circle-8">
+                        <div id="ember3515" class="inner-img-titile pe-top-card-form__photo profile-photo-edit--large-preview profile-photo-edit ember-view">  <div class="profile-photo-edit__camera-plus"></div>
+                            <input type="file" id="top-card-form-edit-upload-input" accept="image/*" class="profile-photo-edit__file-upload-input">
+                        </div>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">姓名：</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">职业头衔：</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">自我介绍：</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--class上传照片模态框结束-->
+
+<!--点赞模态框开始-->
+<div class="modal fade" id="like" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel1">赞（1273）</h4>
+            </div>
+
+            <div class="modal-body">
+              <ul>
+                  <li class="actor-item">
+                      <a>
+                          <div class="like-image">
+                              <div>
+                                  <img src="img/7.png">
+                              </div>
+                          </div>
+                          <div class="like-info">
+                              <h3>杨艺</h3>
+                              <p>重庆工商大学-副教授</p>
+                          </div>
+                      </a>
+                  </li>
+
+                  <li class="actor-item">
+                      <a>
+                          <div class="like-image">
+                              <div>
+                                  <img src="img/7.png">
+                              </div>
+                          </div>
+                          <div class="like-info">
+                              <h3>杨艺</h3>
+                              <p>重庆工商大学-副教授</p>
+                          </div>
+                      </a>
+                  </li>
+
+                  <li class="actor-item">
+                      <a>
+                          <div class="like-image">
+                              <div>
+                                  <img src="img/7.png">
+                              </div>
+                          </div>
+                          <div class="like-info">
+                              <h3>杨艺</h3>
+                              <p>重庆工商大学-副教授</p>
+                          </div>
+                      </a>
+                  </li>
+
+                  <li class="actor-item">
+                      <a>
+                          <div class="like-image">
+                              <div>
+                                  <img src="img/7.png">
+                              </div>
+                          </div>
+                          <div class="like-info">
+                              <h3>杨艺</h3>
+                              <p>重庆工商大学-副教授</p>
+                          </div>
+                      </a>
+                  </li>
+
+                  <li class="actor-item">
+                      <a>
+                          <div class="like-image">
+                              <div>
+                                  <img src="img/7.png">
+                              </div>
+                          </div>
+                          <div class="like-info">
+                              <h3>杨艺</h3>
+                              <p>重庆工商大学-副教授</p>
+                          </div>
+                      </a>
+                  </li>
+
+                  <li class="actor-item">
+                      <a>
+                          <div class="like-image">
+                              <div>
+                                  <img src="img/7.png">
+                              </div>
+                          </div>
+                          <div class="like-info">
+                              <h3>杨艺</h3>
+                              <p>重庆工商大学-副教授</p>
+                          </div>
+                      </a>
+                  </li>
+
+                  <li class="actor-item">
+                      <a>
+                          <div class="like-image">
+                              <div>
+                                  <img src="img/7.png">
+                              </div>
+                          </div>
+                          <div class="like-info">
+                              <h3>杨艺</h3>
+                              <p>重庆工商大学-副教授</p>
+                          </div>
+                      </a>
+                  </li>
+
+                  <li class="actor-item">
+                      <a>
+                          <div class="like-image">
+                              <div>
+                                  <img src="img/7.png">
+                              </div>
+                          </div>
+                          <div class="like-info">
+                              <h3>杨艺</h3>
+                              <p>重庆工商大学-副教授</p>
+                          </div>
+                      </a>
+                  </li>
+              </ul>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--点赞模态框结束-->
+
+<!--弹出的框，编辑个人信息开始                 -->
+<div class="modal fade" id="personal-info1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">编辑个人信息</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">地址</label>
+                        <input type="text" class="form-control" id="work-address">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">电话</label>
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">Email</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">微信公众号号</label>
+                        <input type="text" class="form-control" id="we-account">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">新浪微博</label>
+                        <input type="text" class="form-control" id="sin-account">
+                    </div>
+
+
+                </form>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，编辑个人信息结束-->
+
+
+
+</body>
+</html>

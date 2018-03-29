@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Summernote</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link href="summernote.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script src="summernote.js"></script>
+
+    <!--<script src="js/jquery-validation-1.14.0/lib/jquery.js"></script>-->
+    <script src="js/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="js/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+
+
+</head>
+<body>
+<!--自适应菜单栏-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="row">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Brand"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- <ul class="nav navbar-nav">
+                     <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                     <li><a href="#">Link</a></li>
+                     <li class="dropdown">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                         <ul class="dropdown-menu">
+                             <li><a href="#">Action</a></li>
+                             <li><a href="#">Another action</a></li>
+                             <li><a href="#">Something else here</a></li>
+                             <li role="separator" class="divider"></li>
+                             <li><a href="#">Separated link</a></li>
+                             <li role="separator" class="divider"></li>
+                             <li><a href="#">One more separated link</a></li>
+                         </ul>
+                     </li>
+                 </ul>-->
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="搜索">
+                    </div>
+                    <button type="submit" class="btn btn-default">查询</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="loginIndex.html">主页</a></li>
+                    <li><a href="news.html">消息<span>(10)</span></a></li>
+                    <li><a href="ownPage.html">我</a></li>
+                    <li class="dropdown" id="down">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发文<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="writeArticle.html">发帖子</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="draftBox.html">草稿箱</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="down">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">拥护账户管理</a></li>
+                            <li><a href="#">个人信息增删改查</a></li>
+                            <li><a href="#">教学工作增删改查</a></li>
+                            <li><a href="#">科研工作增删改查</a></li>
+                            <li><a href="#">学术交流增删改查</a></li>
+                            <li><a href="#">活动获奖增删改查</a></li>
+                            <li><a href="#">经验分享增删改查</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">退出登录</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+</nav>
+<!--去除浮动-->
+<div class="clearfix"></div>
+
+<div class="container" style="width:97%;">
+    <div class="row">
+        <div class="col-md-12">
+    <article class="read-post post">
+        <form class="cmxform" id="commentForm" method="get" action="">
+    <!--阅读全文的头部，包括标题和作者时间-->
+    <header class="post-head">
+        <h1 class="post-title">发帖子或者发经验</h1>
+        <!--<section class="post-meta">-->
+            <!--<span class="author">作者：<a href="/author/wangsai/">王赛</a></span> •-->
+            <!--<time class="post-date" datetime="2018年1月22日星期一下午5点03分" title="2018年1月22日星期一下午5点03分">2018年1月22日</time>-->
+        <!--</section>-->
+    </header>
+    <br>
+    <lable class="title">标题：</lable><input class="input-title" type="text" placeholder="标题~" id="cname" name="name" minlength="5" maxlength="15" required/>
+            <button type="button" class="btn btn-primary pull-right">&nbsp;&nbsp;草稿箱>>&nbsp;&nbsp;</button>&nbsp;&nbsp;
+
+            <br><br>
+    <div id="summernote"><p>请输入你的内容~</br></p></div>
+        <button type="button" class="btn btn-primary">保存至草稿箱</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-primary">&nbsp;&nbsp;&nbsp;发布&nbsp;&nbsp;&nbsp;</button>
+
+        </form>
+     </article>
+        </div>
+    </div>
+</div>
+
+<!--底部开始-->
+<div class="meter" style="padding:0px;">
+
+
+
+    <div class="legal-nav">
+        <div class="copyright">
+            <img class="logo-copyright lazy-loaded" alt="教师信息管理网站" src=""> © 2018
+        </div>
+        <ul>
+            <li><a href="">用户协议</a></li>
+            <li><a href="">隐私政策</a></li>
+            <li><a href="">社区准则</a></li>
+            <li><a href="">Cookie 政策</a></li>
+            <li><a href="">版权政策</a></li>
+            <li><a href="">访客设置</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!--<div class="copyright text-center">
+    <div class="container">
+        <h6 class="title-btm about text-center">follow us</h6>
+        <ul class="top-links" style="padding:15px 0 15px;">
+            <li>
+                <a href="#">
+                    <span class="fa fa-facebook"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa fa-twitter"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa fa-google-plus"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa fa-linkedin"></span>
+                </a>
+            </li>
+        </ul>
+        <p>&copy; 2017 Reinforce. All Rights Reserved | Design by
+            <a href="http://w3layouts.com/" target="_blank">W3layouts</a>
+        </p>
+    </div>
+</div>-->
+
+
+
+
+<script>
+
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+
+    $().ready(function() {
+        $("#commentForm").validate();
+    });
+
+</script>
+</body>
+</html>

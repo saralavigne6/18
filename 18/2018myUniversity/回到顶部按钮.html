@@ -1,0 +1,139 @@
+1 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2 <html xmlns="http://www.w3.org/1999/xhtml">
+3 <head>
+    4 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    5 <!-- 新 Bootstrap 核心 CSS 文件 -->
+    6 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    7
+    8 <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    9 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    10
+    11 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    12 <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    13
+    14 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    15 <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    16
+    17 <!--返回顶部代码-->
+    18 <script type="text/javascript">
+    19 //方法一
+    20 $(function(){
+        21     //$("#toTop").click(function(){
+        22 //        $("html").animate({"scrollTop": "0px"},100); //IE,FF
+        23 //        $("body").animate({"scrollTop": "0px"},100); //Webkit
+        24 //        });
+        25     })
+    26 //方法二
+    27     function toTop(){
+        28         window.scroll(0,0);
+        29         }
+    30 </script>
+    31 <title>无标题文档</title>
+    32 </head>
+33
+34 <body>
+35 <div style="margin:0 auto; width:1000px;">
+    36 <button class="btn" value="First">Bootstrap Button</button> <input type="text" value="点击右下角‘返回顶部’按钮" class="text-center" style="color:#F00; width:200px;" />
+    37 <p>用于创建自定义动画的函数。这个函数的关键在于指定动画形式及结果样式属性对象，下面为大家详细介绍下animate方法的具体使用，感兴趣的朋友可以了解下哈</p>
+    38 <p>返回值:jQueryanimate(params, [duration], [easing], [callback])
+    39 概述
+    40 用于创建自定义动画的函数。
+    41 这个函数的关键在于指定动画形式及结果样式属性对象。这个对象中每个属性都表示一个可以变化的样式属性（如“height”、“top”或“opacity”）。注意：所有指定的属性必须用骆驼形式，比如用marginLeft代替margin-left.
+    42 而每个属性的值表示这个样式属性到多少时动画结束。如果是一个数值，样式属性就会从当前的值渐变到指定的值。如果使用的是“hide”、“show”或“toggle”这样的字符串值，则会为该属性调用默认的动画形式。
+    43 在 jQuery 1.2 中，你可以使用 em 和 % 单位。另外，在 jQuery 1.2 中，你可以通过在属性值前面指定 "+=" 或 "-=" 来让元素做相对运动。
+    44 jQuery 1.3中，如果duration设为0则直接完成动画。而在以前版本中则会执行默认动画。
+    45 参数
+    46 paramsOptions一组包含作为动画属性和终值的样式属性和及其值的集合
+    47 duration (可选)String,Number三种预定速度之一的字符串("slow", "normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+    48 easing (可选)String要使用的擦除效果的名称(需要插件支持).默认jQuery提供"linear" 和 "swing".
+    49 callback (可选)Function在动画完成时执行的函数
+    50 示例
+    51 描述:
+    52 点击按钮后div元素的几个不同属性一同变化
+    53 HTML 代码: </p>
+    54 <p>返回值:jQueryanimate(params, [duration], [easing], [callback])
+    55 概述
+    56 用于创建自定义动画的函数。
+    57 这个函数的关键在于指定动画形式及结果样式属性对象。这个对象中每个属性都表示一个可以变化的样式属性（如“height”、“top”或“opacity”）。注意：所有指定的属性必须用骆驼形式，比如用marginLeft代替margin-left.
+    58 而每个属性的值表示这个样式属性到多少时动画结束。如果是一个数值，样式属性就会从当前的值渐变到指定的值。如果使用的是“hide”、“show”或“toggle”这样的字符串值，则会为该属性调用默认的动画形式。
+    59 在 jQuery 1.2 中，你可以使用 em 和 % 单位。另外，在 jQuery 1.2 中，你可以通过在属性值前面指定 "+=" 或 "-=" 来让元素做相对运动。
+    60 jQuery 1.3中，如果duration设为0则直接完成动画。而在以前版本中则会执行默认动画。
+    61 参数
+    62 paramsOptions一组包含作为动画属性和终值的样式属性和及其值的集合
+    63 duration (可选)String,Number三种预定速度之一的字符串("slow", "normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+    64 easing (可选)String要使用的擦除效果的名称(需要插件支持).默认jQuery提供"linear" 和 "swing".
+    65 callback (可选)Function在动画完成时执行的函数
+    66 示例
+    67 描述:
+    68 点击按钮后div元素的几个不同属性一同变化
+    69 HTML 代码: </p>
+    70 <p>返回值:jQueryanimate(params, [duration], [easing], [callback])
+    71 概述
+    72 用于创建自定义动画的函数。
+    73 这个函数的关键在于指定动画形式及结果样式属性对象。这个对象中每个属性都表示一个可以变化的样式属性（如“height”、“top”或“opacity”）。注意：所有指定的属性必须用骆驼形式，比如用marginLeft代替margin-left.
+    74 而每个属性的值表示这个样式属性到多少时动画结束。如果是一个数值，样式属性就会从当前的值渐变到指定的值。如果使用的是“hide”、“show”或“toggle”这样的字符串值，则会为该属性调用默认的动画形式。
+    75 在 jQuery 1.2 中，你可以使用 em 和 % 单位。另外，在 jQuery 1.2 中，你可以通过在属性值前面指定 "+=" 或 "-=" 来让元素做相对运动。
+    76 jQuery 1.3中，如果duration设为0则直接完成动画。而在以前版本中则会执行默认动画。
+    77 参数
+    78 paramsOptions一组包含作为动画属性和终值的样式属性和及其值的集合
+    79 duration (可选)String,Number三种预定速度之一的字符串("slow", "normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+    80 easing (可选)String要使用的擦除效果的名称(需要插件支持).默认jQuery提供"linear" 和 "swing".
+    81 callback (可选)Function在动画完成时执行的函数
+    82 示例
+    83 描述:
+    84 点击按钮后div元素的几个不同属性一同变化
+    85 HTML 代码: </p>
+    86 <p>返回值:jQueryanimate(params, [duration], [easing], [callback])
+    87 概述
+    88 用于创建自定义动画的函数。
+    89 这个函数的关键在于指定动画形式及结果样式属性对象。这个对象中每个属性都表示一个可以变化的样式属性（如“height”、“top”或“opacity”）。注意：所有指定的属性必须用骆驼形式，比如用marginLeft代替margin-left.
+    90 而每个属性的值表示这个样式属性到多少时动画结束。如果是一个数值，样式属性就会从当前的值渐变到指定的值。如果使用的是“hide”、“show”或“toggle”这样的字符串值，则会为该属性调用默认的动画形式。
+    91 在 jQuery 1.2 中，你可以使用 em 和 % 单位。另外，在 jQuery 1.2 中，你可以通过在属性值前面指定 "+=" 或 "-=" 来让元素做相对运动。
+    92 jQuery 1.3中，如果duration设为0则直接完成动画。而在以前版本中则会执行默认动画。
+    93 参数
+    94 paramsOptions一组包含作为动画属性和终值的样式属性和及其值的集合
+    95 duration (可选)String,Number三种预定速度之一的字符串("slow", "normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+    96 easing (可选)String要使用的擦除效果的名称(需要插件支持).默认jQuery提供"linear" 和 "swing".
+    97 callback (可选)Function在动画完成时执行的函数
+    98 示例
+    99 描述:
+    100 点击按钮后div元素的几个不同属性一同变化
+    101 HTML 代码: </p>
+    102 <p>返回值:jQueryanimate(params, [duration], [easing], [callback])
+    103 概述
+    104 用于创建自定义动画的函数。
+    105 这个函数的关键在于指定动画形式及结果样式属性对象。这个对象中每个属性都表示一个可以变化的样式属性（如“height”、“top”或“opacity”）。注意：所有指定的属性必须用骆驼形式，比如用marginLeft代替margin-left.
+    106 而每个属性的值表示这个样式属性到多少时动画结束。如果是一个数值，样式属性就会从当前的值渐变到指定的值。如果使用的是“hide”、“show”或“toggle”这样的字符串值，则会为该属性调用默认的动画形式。
+    107 在 jQuery 1.2 中，你可以使用 em 和 % 单位。另外，在 jQuery 1.2 中，你可以通过在属性值前面指定 "+=" 或 "-=" 来让元素做相对运动。
+    108 jQuery 1.3中，如果duration设为0则直接完成动画。而在以前版本中则会执行默认动画。
+    109 参数
+    110 paramsOptions一组包含作为动画属性和终值的样式属性和及其值的集合
+    111 duration (可选)String,Number三种预定速度之一的字符串("slow", "normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+    112 easing (可选)String要使用的擦除效果的名称(需要插件支持).默认jQuery提供"linear" 和 "swing".
+    113 callback (可选)Function在动画完成时执行的函数
+    114 示例
+    115 描述:
+    116 点击按钮后div元素的几个不同属性一同变化
+    117 HTML 代码: </p>
+    118 <p>返回值:jQueryanimate(params, [duration], [easing], [callback])
+    119 概述
+    120 用于创建自定义动画的函数。
+    121 这个函数的关键在于指定动画形式及结果样式属性对象。这个对象中每个属性都表示一个可以变化的样式属性（如“height”、“top”或“opacity”）。注意：所有指定的属性必须用骆驼形式，比如用marginLeft代替margin-left.
+    122 而每个属性的值表示这个样式属性到多少时动画结束。如果是一个数值，样式属性就会从当前的值渐变到指定的值。如果使用的是“hide”、“show”或“toggle”这样的字符串值，则会为该属性调用默认的动画形式。
+    123 在 jQuery 1.2 中，你可以使用 em 和 % 单位。另外，在 jQuery 1.2 中，你可以通过在属性值前面指定 "+=" 或 "-=" 来让元素做相对运动。
+    124 jQuery 1.3中，如果duration设为0则直接完成动画。而在以前版本中则会执行默认动画。
+    125 参数
+    126 paramsOptions一组包含作为动画属性和终值的样式属性和及其值的集合
+    127 duration (可选)String,Number三种预定速度之一的字符串("slow", "normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+    128 easing (可选)String要使用的擦除效果的名称(需要插件支持).默认jQuery提供"linear" 和 "swing".
+    129 callback (可选)Function在动画完成时执行的函数
+    130 示例
+    131 描述:
+    132 点击按钮后div元素的几个不同属性一同变化
+    133 HTML 代码: </p>
+    134 </div>
+135 <div style=" position:fixed; right:0px; bottom:10px; width:20px; height:100px; background-color:#CCC; cursor:pointer" id="toTop" onclick="toTop()">返回顶部</div>
+136 <!--方法三-->
+137 <div style=" position:fixed; right:50px; bottom:10px; width:20px; height:100px; background-color:#CCC; cursor:pointer"><a href="#">Back to top</a></div>
+138 </body>
+139 </html>

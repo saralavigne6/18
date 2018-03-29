@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-switch.css">
+    <link rel="stylesheet" href="css/fileinput.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/autocomplete.css">
+    <link rel="stylesheet" href="css/bootstrap-slider.css">
+    <script src="js/laydate/laydate.js"></script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="row">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Brand"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- <ul class="nav navbar-nav">
+                     <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                     <li><a href="#">Link</a></li>
+                     <li class="dropdown">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                         <ul class="dropdown-menu">
+                             <li><a href="#">Action</a></li>
+                             <li><a href="#">Another action</a></li>
+                             <li><a href="#">Something else here</a></li>
+                             <li role="separator" class="divider"></li>
+                             <li><a href="#">Separated link</a></li>
+                             <li role="separator" class="divider"></li>
+                             <li><a href="#">One more separated link</a></li>
+                         </ul>
+                     </li>
+                 </ul>-->
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="搜索">
+                    </div>
+                    <button type="submit" class="btn btn-default">查询</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="loginIndex.html">主页</a></li>
+                    <li><a href="news.html">消息<span>(10)</span></a></li>
+                    <li><a href="ownPage.html">我</a></li>
+                    <li class="dropdown" id="down">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发文<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="writeArticle.html">发帖子</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="draftBox.html">草稿箱</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="down">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">拥护账户管理</a></li>
+                            <li><a href="#">个人信息增删改查</a></li>
+                            <li><a href="#">教学工作增删改查</a></li>
+                            <li><a href="#">科研工作增删改查</a></li>
+                            <li><a href="#">学术交流增删改查</a></li>
+                            <li><a href="#">活动获奖增删改查</a></li>
+                            <li><a href="#">经验分享增删改查</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">退出登录</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+</nav>
+
+<div class="clearfix"></div>
+<div class="container" style="width:97%;">
+    <div class="row">
+        <div class="col-md-12 ownPage">
+            <div class="col-md-9 left" style="padding:0px;">
+                <div class="bg-bg">
+                <div class="ownPage-bgPic">
+                    <!--<img src="img/bg.svg"/>-->
+                    <div class="ownPic">
+                        <input type="file" id="img-update" accept="image/*" class="img-update">
+                    </div>
+                    <div class="right-button">
+                        <span type="button" data-toggle="modal" data-target="#upload-img" class="right-btn profile-background-image-edit-button__edit-icon profile-background-image-edit-button__edit-icon--upload svg-icon-wrap"><li-icon aria-hidden="true" type="pencil-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M14.71,4L12,1.29a1,1,0,0,0-1.41,0L3,8.85,1,15l6.15-2,7.55-7.55A1,1,0,0,0,15,4.71,1,1,0,0,0,14.71,4Zm-8.84,7.6-1.5-1.5L9.42,5.07l1.5,1.5Zm5.72-5.72-1.5-1.5,1.17-1.17,1.5,1.5Z" class="small-icon" style="fill-opacity: 1"></path></svg></li-icon></span>
+                    </div>
+
+                </div>
+                <div class="ownPage-info">
+                    <span class="name">杨艺<span class="like-personalPage">&nbsp;&nbsp;<i class="fa fa-heart-o" aria-hidden="true"></i> </span><span>8 </span> </span><br>
+                    <span class="honor">副教授-重庆工商大学</span>
+                </div>
+                </div>
+                    <!--工作经历部分-->
+                    <div class="page1" id="workExperience1">
+                        <div class="title"><span>工作经历</span><i type="button" data-toggle="modal" data-target="#workExperience"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+
+
+                        <div class="all">
+                            <div class="content">
+                                <h4>前端</h4><span>重庆市江北区华唐路的什么公司·重庆江北</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>2017年8月-2017年11月·4个月</span>
+                                <i type="button" data-toggle="modal" data-target="#workExperience" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <br><br><span class="des">说明说明说明说明说明说明说明说明说明说明说明说明说明说
+                                    说明说明说明说明说明说明说明说明说明说明说明说明说明说明明说明说明说明说明说明说明</span>
+                            </div>
+                            <br><br>
+                            <hr>
+                        </div>
+
+
+                        <div class="all">
+                            <div class="content">
+                                <h4>美工人员</h4><span>重庆市江北区华唐路的什么公司·重庆江北</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>2017年8月-2017年11月·4个月</span>
+                                <i type="button" data-toggle="modal" data-target="#workExperience" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <br><br><span class="des">说明说明说明说明说明说明说明说明说明说明说明说明说明说
+                                    说明说明说明说明说明说明说明说明说明说明说明说明说明说明明说明说明说明说明说明说明</span>
+                            </div>
+                            <div class="production">
+                                <div class="top"><h4>作品文件<span>（3）</span></h4>
+                                  <!--作品的上一页和下一页显示按钮-->
+                                    <div class="pre-next"> <a onclick="pre()"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一页</a>&nbsp;<a onclick="next()">下一页<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></div>
+                                    <!--图片横向分页，在这里横向分页显示-->
+                                    <p class="p1 p1-img" id="p1-img">
+
+                                    </p>
+
+
+
+                                    <!--隐藏的图片，从这里读取图片的数量-->
+                                    <p class="p2" id="p2" style="display:none;">
+                                        <img src="img/1.png" alt="">
+                                        <img src="img/2.png" alt="">
+                                        <img src="img/3.png" alt="">
+                                        <img src="img/4.png" alt="">
+                                        <img src="img/5.png" alt="">
+                                        <img src="img/6.png" alt="">
+                                        <img src="img/7.png" alt="">
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--教育经历部分-->
+                    <div class="page2 page1" id="educationExperience1">
+                        <div class="title"><span>教育经历</span><i type="button" data-toggle="modal" data-target="#educationExperience"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+
+
+                        <div class="all">
+                            <div class="content">
+                                <h4>重庆工商大学</h4><span>计算机科学与信息技术专业</span><br>
+                                <span class="timeSchool">2014年9月-2018年6月</span><br>
+                                <span class="clubEvents">社团活动：Vaice 义工志愿者协会 学生会</span>
+                                <i type="button" data-toggle="modal" data-target="#educationExperience" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <br> <br>
+                                <span class="des">说明说明说明说明说明说明说明说明说明说明说明说明说明说
+                                    说明说明说明说明说明说明说明说明说明说明说明说明说明说明明说明说明说明说明说明说明</span>
+                            </div>
+                            <br><br>
+                            <hr>
+                        </div>
+
+
+                        <div class="all">
+                            <div class="content">
+                                <h4>潼南中学</h4><span>计算机科学与信息技术专业</span><br>
+                                <span class="timeSchool">2014年9月-2018年6月</span><br>
+                                <span class="clubEvents">社团活动：Vaice 义工志愿者协会 学生会</span>
+                                <i type="button" data-toggle="modal" data-target="#educationExperience" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <br> <br>
+                                <span class="des">说明说明说明说明说明说明说明说明说明说明说明说明说明说
+                                    说明说明说明说明说明说明说明说明说明说明说明说明说明说明明说明说明说明说明说明说明</span>
+                            </div>
+                            <div class="production">
+                                <div class="top"><h4>作品文件<span>（3）</span></h4>
+                                    <!--作品的上一页和下一页显示按钮-->
+                                    <div class="pre-next"> <a onclick="pre()"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一页</a>&nbsp;<a onclick="next()">下一页<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></div>
+                                    <!--图片横向分页，在这里横向分页显示-->
+                                    <p class="pp p1-img" id="p1-img1">
+
+                                    </p>
+
+                                    <!--隐藏的图片，从这里读取图片的数量-->
+                                    <p class="p2" id="p21" style="display:none;">
+                                        <img src="img/1.png" alt="">
+                                        <img src="img/2.png" alt="">
+                                        <img src="img/3.png" alt="">
+                                        <img src="img/4.png" alt="">
+                                        <img src="img/5.png" alt="">
+                                        <img src="img/6.png" alt="">
+                                        <img src="img/7.png" alt="">
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <!--基本教学部分-->
+                    <div class="page3 page1" id="basicTeaching1">
+                        <div class="title"><span>基本教学</span><i type="button" data-toggle="modal" data-target="#basicTeaching"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <h4>重庆工商大学·计算机科学与信息技术工程学院</h4><span>计算机科学与技术专业·《数据库的简单使用教程》</span><br>
+                                <span class="timeSchool">2014年9月-2018年6月</span><br>
+                                <i type="button" data-toggle="modal" data-target="#basicTeaching" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                               <br> <span class="des">说明说明说明说明说明说明说明说明说明说明说明说明说明说
+                                    说明说明说明说明说明说明说明说明说明说明说明说明说明说明明说明说明说明说明说明说明</span>
+                            </div>
+                            <br><br>
+                            <hr>
+                        </div>
+                        <div class="all">
+                            <div class="content">
+                                <h4>重庆工商大学·计算机科学与信息技术工程学院</h4><span>计算机科学与技术专业·《数据库的简单使用教程》</span><br>
+                                <span class="timeSchool">2014年9月-2018年6月</span><br>
+                                <i type="button" data-toggle="modal" data-target="#basicTeaching" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <br> <span class="des">说明说明说明说明说明说明说明说明说明说明说明说明说明说
+                                    说明说明说明说明说明说明说明说明说明说明说明说明说明说明明说明说明说明说明说明说明</span>
+                            </div>
+                            <br><br>
+                            <hr>
+                        </div>
+                        <div class="all">
+                            <div class="content">
+                                <h4>重庆工商大学·计算机科学与信息技术工程学院</h4><span>计算机科学与技术专业·《数据库的简单使用教程》</span><br>
+                                <span class="timeSchool">2014年9月-2018年6月</span><br>
+                                <i type="button" data-toggle="modal" data-target="#basicTeaching" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <br> <span class="des">说明说明说明说明说明说明说明说明说明说明说明说明说明说
+                                    说明说明说明说明说明说明说明说明说明说明说明说明说明说明明说明说明说明说明说明说明</span>
+                            </div>
+                            <br><br>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <!--课程资源部分-->
+                    <div class="page4 page1" id="courseResources1">
+                        <div class="title"><span>课程资源</span><i type="button" data-toggle="modal" data-target="#courseResources"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <!--<h4>重庆工商大学·计算机科学与信息技术工程学院</h4><span>计算机科学与技术专业·《数据库的简单使用教程》</span><br>-->
+                                <!--<span class="timeSchool">2014年9月-2018年6月</span><br>-->
+                                <i style="margin-top:40px;" type="button" data-toggle="modal" data-target="#courseResources" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+
+                            <div class="production">
+                                <div class="top"><h4>资源文件<span>（7）</span></h4>
+                                    <!--作品的上一页和下一页显示按钮-->
+                                    <div class="pre-next"> <a onclick="pre()"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一页</a>&nbsp;<a onclick="next()">下一页<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></div>
+                                    <!--图片横向分页，在这里横向分页显示-->
+                                    <p class="pp p1-img" id="p1-img2">
+
+                                    </p>
+
+                                    <!--隐藏的图片，从这里读取图片的数量-->
+                                    <p class="p2" id="p22" style="display:none;">
+                                        <img src="img/1.png" alt="">
+                                        <img src="img/2.png" alt="">
+                                        <img src="img/3.png" alt="">
+                                        <img src="img/4.png" alt="">
+                                        <img src="img/5.png" alt="">
+                                        <img src="img/6.png" alt="">
+                                        <img src="img/7.png" alt="">
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <!--教学研究部分-->
+                    <div class="page5 page1" id="teachingResearch1">
+                        <div class="title"><span>教学研究</span><i type="button" data-toggle="modal" data-target="#teachingResearch"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <h4>项目名称：数据库综述（使用简单教程）</h4><span>研究类型：计算机</span><br>
+                                <span class="timeSchool">2014年9月-2018年6月</span><br>
+                                <i type="button" data-toggle="modal" data-target="#teachingResearch" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <br> <span class="des">说明说明说明说明说明说明说明说明说明说明说明说明说明说
+                                    说明说明说明说明说明说明说明说明说明说明说明说明说明说明明说明说明说明说明说明说明</span>
+                            </div>
+                            <div class="production">
+                                <div class="top"><h4>成果资源<span>（7）</span></h4>
+                                    <!--作品的上一页和下一页显示按钮-->
+                                    <div class="pre-next"> <a onclick="pre()"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一页</a>&nbsp;<a onclick="next()">下一页<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></div>
+                                    <!--图片横向分页，在这里横向分页显示-->
+                                    <p class="pp p1-img" id="p1-img3">
+
+                                    </p>
+
+                                    <!--隐藏的图片，从这里读取图片的数量-->
+                                    <p class="p2" id="p23" style="display:none;">
+                                        <img src="img/1.png" alt="">
+                                        <img src="img/2.png" alt="">
+                                        <img src="img/3.png" alt="">
+                                        <img src="img/4.png" alt="">
+                                        <img src="img/5.png" alt="">
+                                        <img src="img/6.png" alt="">
+                                        <img src="img/7.png" alt="">
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <br><br>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <!--技能部分-->
+                    <div class="page6 page1" id="talent1">
+                        <div class="title"><span>精选技能</span><i type="button" data-toggle="modal" data-target="#talent"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <div class="list">
+                                    <a class="title1"><span>PhotoShop</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <i style="margin-top: -70px;" type="button" data-toggle="modal" data-target="#talent" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+
+                                <div class="list">
+                                    <a class="title1"><span>Office</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="list">
+                                    <a class="title1"><span>数据库</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <br><br>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <!--科研情况-->
+                    <div class="page7 page1" id="research1">
+                        <div class="title"><span>科研情况</span><i type="button" data-toggle="modal" data-target="#research"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <div class="list">
+                                    <a class="title1"><span>PhotoShop</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <i style="margin-top: -70px;" type="button" data-toggle="modal" data-target="#research" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+
+                                <div class="list">
+                                    <a class="title1"><span>Office</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="list">
+                                    <a class="title1"><span>数据库</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <br><br>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <!--学术交流-->
+                    <div class="page7 page1" id="academicExchange1">
+                        <div class="title"><span>学术交流</span><i type="button" data-toggle="modal" data-target="#academicExchange"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <div class="list">
+                                    <a class="title1"><span>PhotoShop</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <i style="margin-top: -70px;" type="button" data-toggle="modal" data-target="#academicExchange" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+
+                                <div class="list">
+                                    <a class="title1"><span>Office</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="list">
+                                    <a class="title1"><span>数据库</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <br><br>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <!--获奖情况-->
+                    <div class="page8 page1" id="awards1">
+                        <div class="title"><span>获奖情况</span><i type="button" data-toggle="modal" data-target="#awards"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <div class="list">
+                                    <a class="title1"><span>PhotoShop</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <i style="margin-top: -70px;" type="button" data-toggle="modal" data-target="#awards" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+
+                                <div class="list">
+                                    <a class="title1"><span>Office</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="list">
+                                    <a class="title1"><span>数据库</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <br><br>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <!--参加活动-->
+                    <div class="page9 page1" id="participateActivities1">
+                        <div class="title"><span>参加活动</span><i type="button" data-toggle="modal" data-target="#participateActivities"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <div class="list">
+                                    <a class="title1"><span>PhotoShop</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <i style="margin-top: -70px;" type="button" data-toggle="modal" data-target="#participateActivities" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+
+                                <div class="list">
+                                    <a class="title1"><span>Office</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="list">
+                                    <a class="title1"><span>数据库</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <br><br>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <!--所做项目-->
+                    <div class="page10 page1" id="projects1">
+                        <div class="title"><span>所做项目</span><i type="button" data-toggle="modal" data-target="#projects"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <div class="list">
+                                    <a class="title1"><span>PhotoShop</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <i style="margin-top: -70px;" type="button" data-toggle="modal" data-target="#projects" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+
+                                <div class="list">
+                                    <a class="title1"><span>Office</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="list">
+                                    <a class="title1"><span>数据库</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <br><br>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <!--专利发明-->
+                    <div class="page11 page1" id="patentedInvention1">
+                        <div class="title"><span>专利发明</span><i type="button" data-toggle="modal" data-target="#patentedInvention"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <div class="list">
+                                    <a class="title1"><span>PhotoShop</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <i style="margin-top: -70px;" type="button" data-toggle="modal" data-target="#patentedInvention" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+
+                                <div class="list">
+                                    <a class="title1"><span>Office</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="list">
+                                    <a class="title1"><span>数据库</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <br><br>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <!--出版作品-->
+                    <div class="page12 page1" id="publishedWorks1">
+                        <div class="title"><span>出版作品</span><i type="button" data-toggle="modal" data-target="#publishedWorks"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <div class="list">
+                                    <a class="title1"><span>PhotoShop</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <i style="margin-top: -70px;" type="button" data-toggle="modal" data-target="#publishedWorks" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+
+                                <div class="list">
+                                    <a class="title1"><span>Office</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="list">
+                                    <a class="title1"><span>数据库</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <br><br>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <!--资格认证-->
+                    <div class="page13 page1" id="certification1">
+                        <div class="title"><span>资格认证</span><i type="button" data-toggle="modal" data-target="#certification"  class="fa fa-plus-square-o" aria-hidden="true"></i></div>
+                        <div class="all">
+                            <div class="content">
+                                <div class="list">
+                                    <a class="title1"><span>PhotoShop</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <i style="margin-top: -70px;" type="button" data-toggle="modal" data-target="#certification" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+
+                                <div class="list">
+                                    <a class="title1"><span>Office</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="list">
+                                    <a class="title1"><span>数据库</span>
+
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <br><br>
+                            <hr>
+                        </div>
+
+                    </div>
+
+
+            </div>
+            <!--右侧折叠菜单-->
+            <div class="col-md-3 right" style="padding-right:0px;">
+                <div class="menu" id="menu">
+                    <button class="menu-button" id="menu-button">
+                        <span>完善个人档案</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span><i style="font-size:2rem;" class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="panel accordion-section test-1" id="panel" style="display:none;">
+                        <div class="personalInfo accordion-section">
+                            <h5 class="accordion-section-title"><a href="#accordion-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人简介</a><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></h5><!--点击后出现下面的ul-->
+                            <ul style="display:block;" class="accordion-section-content" id="accordion-1">
+                                <li type="button" data-toggle="modal" data-target="#workExperience"><i class="fa fa-briefcase" aria-hidden="true"></i>工作经历<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                                <li type="button" data-toggle="modal" data-target="#educationExperience"><i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                            </ul>
+                        </div>
+
+                        <div class="teachingWork accordion-section">
+                            <h5 class="accordion-section-title"><a href="#accordion-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;教学工作</a><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></h5><!--点击后出现下面的ul-->
+                            <ul class="accordion-section-content" id="#accordion-2">
+                                <li type="button" data-toggle="modal" data-target="#basicTeaching"><i class="fa fa-book" aria-hidden="true"></i>基本教学<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                                <li type="button" data-toggle="modal" data-target="#courseResources"><i class="fa fa-bookmark" aria-hidden="true"></i>课程资源<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                                <li type="button" data-toggle="modal" data-target="#teachingResearch"><i class="fa fa-search-plus" aria-hidden="true"></i>教学研究<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                            </ul>
+                        </div>
+
+                        <div class="skill accordion-section">
+                            <h5 class="accordion-section-title"><a href="#accordion-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;技能</a><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></h5><!--点击后出现下面的ul-->
+                            <ul class="accordion-section-content" id="#accordion-3">
+                                <li type="button" data-toggle="modal" data-target="#talent"><i class="fa fa-star-half-o" aria-hidden="true"></i>技能专长<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                            </ul>
+                        </div>
+
+                        <div class="personalAchievement accordion-section">
+                            <h5 class="accordion-section-title"><a href="#accordion-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人成就</a><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></h5><!--点击后出现下面的ul-->
+                            <ul class="accordion-section-content" id="#accordion-4">
+                                <li type="button" data-toggle="modal" data-target="#research"><i class="fa fa-flask" aria-hidden="true"></i>科研情况<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                                <li type="button" data-toggle="modal" data-target="#academicExchange"><i class="fa fa-comments-o" aria-hidden="true"></i>学术交流<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                                <li type="button" data-toggle="modal" data-target="#awards"><i class="fa fa-trophy" aria-hidden="true"></i>获奖情况<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                                <li type="button" data-toggle="modal" data-target="#participateActivities"><i class="fa fa-camera-retro" aria-hidden="true"></i>参加活动<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                                <li type="button" data-toggle="modal" data-target="#projects"><i class="fa fa-tasks" aria-hidden="true"></i>所做项目<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                                <li type="button" data-toggle="modal" data-target="#patentedInvention"><i class="fa fa-product-hunt" aria-hidden="true"></i>专利发明<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                                <li type="button" data-toggle="modal" data-target="#publishedWorks"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>出版作品<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                                <li type="button" data-toggle="modal" data-target="#certification"><i class="fa fa-check-square-o" aria-hidden="true"></i>资格认证<i class="fa fa-plus-square-o last" aria-hidden="true"></i></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--个人信息显示-->
+                <div class="personal-info">
+                     <div class="personal-info-title">
+                         <a>联系方式及个人信息</a> <a><i type="button" data-toggle="modal" data-target="#personal-info-edit" class="fa fa-pencil" aria-hidden="true"></i></a>
+                     </div>
+                     <div class="personal-info-content">
+                         <ul>
+                             <li>
+                                 <div><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;地址</div>
+                                 <div>重庆市南岸区学府大道19号重庆市南岸区学府大道19号</div>
+                             </li>
+                             <li>
+                                 <div><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;电话</div>
+                                 <div>15730280932</div>
+                             </li>
+                             <li>
+                                 <div><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;Email</div>
+                                 <div>ihateyou1692783558@hotmail.com</div>
+                             </li>
+                             <li>
+                                 <div><i class="fa fa-weixin" aria-hidden="true"></i>&nbsp;&nbsp;微信公众号</div>
+                                 <div>技术家园</div>
+                             </li>
+                             <li>
+                                 <div><i class="fa fa-weibo" aria-hidden="true"></i>&nbsp;&nbsp;新浪博客</div>
+                                 <div>@SaraLavigne6</div>
+                             </li>
+
+                         </ul>
+                     </div>
+                </div>
+                <!--视频显示-->
+                <div class="personal-info video">
+                    <div class="personal-info-title">
+                        <a>精选视频资源</a> <a><i class="fa fa-file-video-o" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="personal-info-content">
+                        <ul>
+                            <li>
+                                <div class="vi"><img src="img/bg.jpg">
+                                    <div class="hover-thing">
+                                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    </div>
+                                    <div style="" class="hover-text">
+                                        <a>数据库教程解析（第一版）</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="vi"><img src="img/bg.jpg">
+                                    <div class="hover-thing">
+                                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    </div>
+                                    <div style="" class="hover-text">
+                                        <a>数据库教程解析（第一版）</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="vi"><img src="img/bg.jpg">
+                                    <div class="hover-thing">
+                                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    </div>
+                                    <div style="" class="hover-text">
+                                        <a>数据库教程解析（第一版）</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--发布经验帖子-->
+                <div class="personal-info post1">
+                    <div class="personal-info-title">
+                        <a>精选经验帖子</a> <a><i class="fa fa-clipboard" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="personal-info-content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="js/jquery-1.9.1.js"></script>
+<!--<script src="js/bootstrap1.min.js"></script>-->
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-switch.js"></script>
+<script type="text/javascript" src="js/fileinput.min.js"></script>
+<script type="text/javascript" src="js/fileinput_locale_zh.js"></script>
+<script type="text/javascript" src="js/jquery.goup.min.js"></script>
+<script src="js/autocomplete.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<!--<script src="js/npm.js"></script>-->
+
+<!--class模态框开始-->
+<div class="modal fade" id="upload-img" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">编辑自我简介</h4>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="bg">
+                    <div class="background-img"></div>
+                    <div class="right-button">
+                        <div class="suggest">建议尺寸：600px · 200px</div>
+                        <span class="right-btn profile-background-image-edit-button__edit-icon profile-background-image-edit-button__edit-icon--upload svg-icon-wrap"><li-icon aria-hidden="true" type="pencil-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M14.71,4L12,1.29a1,1,0,0,0-1.41,0L3,8.85,1,15l6.15-2,7.55-7.55A1,1,0,0,0,15,4.71,1,1,0,0,0,14.71,4Zm-8.84,7.6-1.5-1.5L9.42,5.07l1.5,1.5Zm5.72-5.72-1.5-1.5,1.17-1.17,1.5,1.5Z" class="small-icon" style="fill-opacity: 1"></path></svg></li-icon></span>
+                        <input type="file" id="top-card-form-background-image-edit-upload-input" accept="image/*" class="profile-background-image-edit-button__upload">
+                    </div>
+
+
+                    <div class="img-title pe-form-field pe-top-card-form__photo-field pe-top-card-form__photo-field--floating pe-top-card-form__photo-wrapper  EntityPhoto-circle-8">
+                        <div id="ember3515" class="inner-img-titile pe-top-card-form__photo profile-photo-edit--large-preview profile-photo-edit ember-view">  <div class="profile-photo-edit__camera-plus"></div>
+                            <input type="file" id="top-card-form-edit-upload-input" accept="image/*" class="profile-photo-edit__file-upload-input">
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">姓名：</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">职业头衔：</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">自我介绍：</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--class模态框结束-->
+
+<!--弹出的框，工作经历开始-->
+<div class="modal fade" id="workExperience" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">工作经历</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">职业头衔</label>
+                        <input type="text" class="form-control" id="professional">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">公司</label>
+                        <input type="text" class="form-control" id="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">地区</label>
+                        <input type="text" class="form-control" id="area">
+                    </div>
+                    <div class="form-group" id="outline" style="display:none;">
+                        <label for="message-text" class="control-label">入职时间-离职时间</label>
+                        <input type="text" class="form-control"  id="enter-date">
+                    </div>
+                    <!--在职只显示入职时间-->
+                    <div class="form-group" id="online">
+                        <label for="message-text" class="control-label">入职时间-至今</label>
+                        <input type="text" class="form-control"  id="enter-date1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">在职</label>
+                        <input type="checkbox" id="my-checkbox" name="my-checkbox" checked="checked">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">说明</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </form>
+
+
+                    <form id="form" action="" method="post" enctype="multipart/form-data">
+                        <div class="row form-group">
+                            <div class="panel panel-primary" style="border-color:white;">
+
+                                <div class=" ">
+                                    <div class="col-sm-12">
+                                        <label for="message-text" class="control-label">传作品</label>
+                                        <input id="input-id" name="file" multiple type="file" data-show-caption="true">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框工作经历结束-->
+
+<!--弹出的框，教育经历开始-->
+<div class="modal fade" id="educationExperience" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">教育经历</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">学校</label>
+                        <input type="text" class="form-control" id="school">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">学位</label>
+                        <input type="text" class="form-control" id="degree">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">专业</label>
+                        <input type="text" class="form-control" id="major">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">入学时间-毕业时间</label>
+                        <input type="text" class="form-control" id="time-school">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">社团活动</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">说明</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </form>
+
+                <form id="form1" action="" method="post" enctype="multipart/form-data">
+                    <div class="row form-group">
+                        <div class="panel panel-primary" style="border-color:white;">
+
+                            <div class=" ">
+                                <div class="col-sm-12">
+                                    <label for="message-text" class="control-label">传作品</label>
+                                    <input id="input-id1" name="file" multiple type="file" data-show-caption="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框教育经历结束-->
+
+<!--弹出的框，基本教学开始-->a
+<div class="modal fade" id="basicTeaching" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">基本教学</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">任课学校</label>
+                        <input type="text" class="form-control" id="teachingSchool">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">任课学院</label>
+                        <input type="text" class="form-control" id="teachingFaculty">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">任课专业</label>
+                        <input type="text" class="form-control" id="teachingMajor">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">任课名称</label>
+                        <input type="text" class="form-control" id="teachingName">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">任课起止时间</label>
+                        <input type="text" class="form-control" id="teachingTime">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">说明</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，基本教学结束-->
+
+<!--弹出的框，课程资源开始-->
+<div class="modal fade" id="courseResources" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">课程资源</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">资源名称</label>
+                        <input type="text" class="form-control" id="resourceName">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">资源说明</label>
+                        <input type="text" class="form-control" id="resourceDescription">
+                    </div>
+                </form>
+
+                <form id="form2" action="" method="post" enctype="multipart/form-data">
+                    <div class="row form-group">
+                        <div class="panel panel-primary" style="border-color:white;">
+
+                            <div class=" ">
+                                <div class="col-sm-12">
+                                    <label for="message-text" class="control-label">传作品</label>
+                                    <input id="input-id2" name="file" multiple type="file" data-show-caption="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，课程资源结束-->
+
+<!--弹出的框，教学研究开始   开始开始开始开始开始              -->
+<div class="modal fade" id="teachingResearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">教学研究</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">项目名称</label>
+                        <input type="text" class="form-control" id="projectName">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">研究类型</label>
+                        <input type="text" class="form-control" id="typeOfStudy">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">起止时间</label>
+                        <input type="text" class="form-control" id="startAndEndTime">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">研究成果说明</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+
+                </form>
+                <form id="form3" action="" method="post" enctype="multipart/form-data">
+                    <div class="row form-group">
+                        <div class="panel panel-primary" style="border-color:white;">
+
+                            <div class=" ">
+                                <div class="col-sm-12">
+                                    <label for="message-text" class="control-label">上传研究成果</label>
+                                    <input id="input-id3" name="file" multiple type="file" data-show-caption="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，教学研究结束-->
+
+<!--弹出的框，技能专长开始                 -->
+<div class="modal fade" id="talent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加技能</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">技能</label>
+                        <input type="text" class="form-control" id="talentName">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">擅长度</label>&nbsp;&nbsp;&nbsp;
+                        <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="14"/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，技能专长结束-->
+
+<!--弹出的框，科研研究开始                 -->
+<div class="modal fade" id="research" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">科研情况</h4>
+            </div>
+
+            <div class="modal-body">
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，科研研究结束-->
+
+<!--弹出的框，学术交流开始                 -->
+<div class="modal fade" id="academicExchange" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">学术交流</h4>
+            </div>
+
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，学术交流结束-->
+
+<!--弹出的框，获奖情况开始                 -->
+<div class="modal fade" id="awards" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">获奖情况</h4>
+            </div>
+
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，获奖情况结束-->
+
+<!--弹出的框，参加活动开始                 -->
+<div class="modal fade" id="participateActivities" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">参加活动</h4>
+            </div>
+
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，参加活动结束-->
+
+<!--弹出的框，所做项目开始                 -->
+<div class="modal fade" id="projects" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">所做项目</h4>
+            </div>
+
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，所做项目结束-->
+
+<!--弹出的框，专利发明开始                 -->
+<div class="modal fade" id="patentedInvention" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">专利发明</h4>
+            </div>
+
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，专利发明结束-->
+
+<!--弹出的框，出版作品开始                 -->
+<div class="modal fade" id="publishedWorks" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">出版作品</h4>
+            </div>
+
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，出版作品结束-->
+
+<!--弹出的框，资格认证开始                 -->
+<div class="modal fade" id="certification" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">资格认证</h4>
+            </div>
+
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，资格认证结束-->
+
+<!--弹出的框，编辑个人信息开始                 -->
+<div class="modal fade" id="personal-info-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">编辑个人信息</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">地址</label>
+                        <input type="text" class="form-control" id="work-address">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">电话</label>
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">Email</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">微信公众号号</label>
+                        <input type="text" class="form-control" id="we-account">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">新浪微博</label>
+                        <input type="text" class="form-control" id="sin-account">
+                    </div>
+
+
+                </form>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，编辑个人信息结束-->
+
+
+
+<script>
+    //折叠菜单
+    $(document).ready(function(){
+        //$("#firstpane .menu_body:eq(0)").show();
+        $(".menu .panel .accordion-section .accordion-section-title").click(function(){
+            // alert(1111);
+            $(this).next(".menu .panel .accordion-section .accordion-section-content").slideToggle(300).siblings(".menu .panel .accordion-section .accordion-section-content").slideUp("slow");
+            //$(this).siblings().removeClass("current");
+        });
+    });
+
+
+    //点击右侧折叠菜单显示
+    $("#menu-button").click(function () {
+        var a = document.getElementById("panel").style.display;
+        if(a=="none"){
+            document.getElementById("panel").style.display="block";
+        }else {
+            document.getElementById("panel").style.display="none";
+        }
+        //console.log(1);
+    });
+    //起止日期时间范围
+    laydate.render({
+        elem: '#enter-date'
+        ,type: 'datetime'
+        ,range: true
+    });
+    //起日期事件（在职）
+    laydate.render({
+        elem: '#enter-date1'
+        ,format: 'yyyy年MM月dd日'
+    });
+    //school-time入学和毕业事件
+    laydate.render({
+        elem: '#time-school'
+        ,type: 'datetime'
+        ,range: true
+    });
+    //任课起止时间
+    laydate.render({
+        elem: '#teachingTime'
+        ,type: 'datetime'
+        ,range: true
+    });
+    //教学研究起止时间
+    laydate.render({
+        elem: '#startAndEndTime'
+        ,type: 'datetime'
+        ,range: true
+    });
+
+
+
+
+
+    //开关控件
+    $("[name='my-checkbox']").bootstrapSwitch();
+    //开关控件监听以及执行事件
+    $('input[name="my-checkbox"]').on('switchChange.bootstrapSwitch', function(event, state) {
+      //  console.log(this); // DOM element
+      //  console.log(event); // jQuery event
+        console.log(state); // true | false
+        if(state==true){
+            console.log("选中");
+            document.getElementById("outline").style.display="none";
+            document.getElementById("online").style.display="block";
+        }else{
+            console.log("未选");
+            document.getElementById("outline").style.display="block";
+            document.getElementById("online").style.display="none";
+        }
+    });
+    //上传文件插件
+    $(function () {
+        initFileInput("input-id");
+    })
+
+    function initFileInput(ctrlName) {
+        var control = $('#' + ctrlName);
+        control.fileinput({
+            language: 'zh', //设置语言
+            uploadUrl: "", //上传的地址
+            allowedFileExtensions: ['jpg', 'gif', 'png','doc','docx','pdf','ppt','pptx','txt'],//接收的文件后缀
+            maxFilesNum : 5,//上传最大的文件数量
+            //uploadExtraData:{"id": 1, "fileName":'123.mp3'},
+            uploadAsync: true, //默认异步上传
+            showUpload: true, //是否显示上传按钮
+            showRemove : true, //显示移除按钮
+            showPreview : true, //是否显示预览
+            showCaption: false,//是否显示标题
+            browseClass: "btn btn-primary", //按钮样式
+            //dropZoneEnabled: true,//是否显示拖拽区域
+            //minImageWidth: 50, //图片的最小宽度
+            //minImageHeight: 50,//图片的最小高度
+            //maxImageWidth: 1000,//图片的最大宽度
+            //maxImageHeight: 1000,//图片的最大高度
+            maxFileSize: 0,//单位为kb，如果为0表示不限制文件大小
+            //minFileCount: 0,
+            //maxFileCount: 10, //表示允许同时上传的最大文件个数
+            enctype: 'multipart/form-data',
+            validateInitialCount:true,
+            previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+            msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+
+        }).on('filepreupload', function(event, data, previewId, index) {     //上传中
+            var form = data.form, files = data.files, extra = data.extra,
+                response = data.response, reader = data.reader;
+            console.log('文件正在上传');
+        }).on("fileuploaded", function (event, data, previewId, index) {    //一个文件上传成功
+            console.log('文件上传成功！'+data.id);
+
+        }).on('fileerror', function(event, data, msg) {  //一个文件上传失败
+            console.log('文件上传失败！'+data.id);
+        })
+    }
+
+    //教育经历上传文件
+    $(function () {
+        initFileInput("input-id1");
+    })
+
+    function initFileInput(ctrlName) {
+        var control = $('#' + ctrlName);
+        control.fileinput({
+            language: 'zh', //设置语言
+            uploadUrl: "", //上传的地址
+            allowedFileExtensions: ['jpg', 'gif', 'png','doc','docx','pdf','ppt','pptx','txt'],//接收的文件后缀
+            maxFilesNum : 5,//上传最大的文件数量
+            //uploadExtraData:{"id": 1, "fileName":'123.mp3'},
+            uploadAsync: true, //默认异步上传
+            showUpload: true, //是否显示上传按钮
+            showRemove : true, //显示移除按钮
+            showPreview : true, //是否显示预览
+            showCaption: false,//是否显示标题
+            browseClass: "btn btn-primary", //按钮样式
+            //dropZoneEnabled: true,//是否显示拖拽区域
+            //minImageWidth: 50, //图片的最小宽度
+            //minImageHeight: 50,//图片的最小高度
+            //maxImageWidth: 1000,//图片的最大宽度
+            //maxImageHeight: 1000,//图片的最大高度
+            maxFileSize: 0,//单位为kb，如果为0表示不限制文件大小
+            //minFileCount: 0,
+            //maxFileCount: 10, //表示允许同时上传的最大文件个数
+            enctype: 'multipart/form-data',
+            validateInitialCount:true,
+            previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+            msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+
+        }).on('filepreupload', function(event, data, previewId, index) {     //上传中
+            var form = data.form, files = data.files, extra = data.extra,
+                response = data.response, reader = data.reader;
+            console.log('文件正在上传');
+        }).on("fileuploaded", function (event, data, previewId, index) {    //一个文件上传成功
+            console.log('文件上传成功！'+data.id);
+
+        }).on('fileerror', function(event, data, msg) {  //一个文件上传失败
+            console.log('文件上传失败！'+data.id);
+        })
+    }
+    //课程资源上传文件
+    $(function () {
+        initFileInput("input-id2");
+    })
+
+    function initFileInput(ctrlName) {
+        var control = $('#' + ctrlName);
+        control.fileinput({
+            language: 'zh', //设置语言
+            uploadUrl: "", //上传的地址
+            allowedFileExtensions: ['jpg', 'gif', 'png','doc','docx','pdf','ppt','pptx','txt'],//接收的文件后缀
+            maxFilesNum : 5,//上传最大的文件数量
+            //uploadExtraData:{"id": 1, "fileName":'123.mp3'},
+            uploadAsync: true, //默认异步上传
+            showUpload: true, //是否显示上传按钮
+            showRemove : true, //显示移除按钮
+            showPreview : true, //是否显示预览
+            showCaption: false,//是否显示标题
+            browseClass: "btn btn-primary", //按钮样式
+            //dropZoneEnabled: true,//是否显示拖拽区域
+            //minImageWidth: 50, //图片的最小宽度
+            //minImageHeight: 50,//图片的最小高度
+            //maxImageWidth: 1000,//图片的最大宽度
+            //maxImageHeight: 1000,//图片的最大高度
+            maxFileSize: 0,//单位为kb，如果为0表示不限制文件大小
+            //minFileCount: 0,
+            //maxFileCount: 10, //表示允许同时上传的最大文件个数
+            enctype: 'multipart/form-data',
+            validateInitialCount:true,
+            previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+            msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+
+        }).on('filepreupload', function(event, data, previewId, index) {     //上传中
+            var form = data.form, files = data.files, extra = data.extra,
+                response = data.response, reader = data.reader;
+            console.log('文件正在上传');
+        }).on("fileuploaded", function (event, data, previewId, index) {    //一个文件上传成功
+            console.log('文件上传成功！'+data.id);
+
+        }).on('fileerror', function(event, data, msg) {  //一个文件上传失败
+            console.log('文件上传失败！'+data.id);
+        })
+    }
+
+    //教学研究上传文件
+    $(function () {
+        initFileInput("input-id3");
+    })
+
+    function initFileInput(ctrlName) {
+        var control = $('#' + ctrlName);
+        control.fileinput({
+            language: 'zh', //设置语言
+            uploadUrl: "", //上传的地址
+            allowedFileExtensions: ['jpg', 'gif', 'png','doc','docx','pdf','ppt','pptx','txt'],//接收的文件后缀
+            maxFilesNum : 5,//上传最大的文件数量
+            //uploadExtraData:{"id": 1, "fileName":'123.mp3'},
+            uploadAsync: true, //默认异步上传
+            showUpload: true, //是否显示上传按钮
+            showRemove : true, //显示移除按钮
+            showPreview : true, //是否显示预览
+            showCaption: false,//是否显示标题
+            browseClass: "btn btn-primary", //按钮样式
+            //dropZoneEnabled: true,//是否显示拖拽区域
+            //minImageWidth: 50, //图片的最小宽度
+            //minImageHeight: 50,//图片的最小高度
+            //maxImageWidth: 1000,//图片的最大宽度
+            //maxImageHeight: 1000,//图片的最大高度
+            maxFileSize: 0,//单位为kb，如果为0表示不限制文件大小
+            //minFileCount: 0,
+            //maxFileCount: 10, //表示允许同时上传的最大文件个数
+            enctype: 'multipart/form-data',
+            validateInitialCount:true,
+            previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+            msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+
+        }).on('filepreupload', function(event, data, previewId, index) {     //上传中
+            var form = data.form, files = data.files, extra = data.extra,
+                response = data.response, reader = data.reader;
+            console.log('文件正在上传');
+        }).on("fileuploaded", function (event, data, previewId, index) {    //一个文件上传成功
+            console.log('文件上传成功！'+data.id);
+
+        }).on('fileerror', function(event, data, msg) {  //一个文件上传失败
+            console.log('文件上传失败！'+data.id);
+        })
+    }
+
+
+
+
+
+
+
+
+
+
+//图片横向分页
+//     function $(id) {
+//         console.log("id" + id);
+//         return document.getElementById(id);
+//     }
+//     function $_tag(tag) {
+//         console.log("tag" + tag);
+//         return document.getElementsByTagName(tag);
+//     }
+    //搞一个拼img标签的函数 传参数  for循环
+    //扩展、稳定、兼容、好用(简单)...
+    //<img src="images/7.jpg" alt="">
+
+
+    var count = 4;    // 每页的图片数目
+    var currentpage = 1;  //当前页数
+
+    var imgs = $("#p2").children("img");//获取页面img标签
+    //var imgs1 = $("#p21").children("img");//获取教育经历图片img标签
+
+
+   // var imgs = $_tag("img");
+    //console.log(imgs);  可以深入了解下
+    console.log("图片总数：" + imgs.length);
+    var totalpage = Math.ceil(imgs.length/count);
+    console.log("总页数：" + totalpage);
+
+    function pre() {
+        if(currentpage == 1){
+            console.log("已经是第一页了!");
+            return;
+        }else if(currentpage > 1){
+            var tmp = (currentpage - 2) * count + 1;
+            var str = "";
+            str += "<img src='" + "img/" + tmp + ".png'>";
+            str += "<img src='" + "img/" + (tmp+1) + ".png'>";
+            str += "<img src='" + "img/" + (tmp+2) + ".png'>";
+            str += "<img src='" + "img/" + (tmp+3) + ".png'>";
+            currentpage -= 1;
+            console.log(str);
+            document.getElementById("p1-img").innerHTML = str;
+           // $("#p1-img").append(str);
+        }
+    }
+    function next() {
+        if(currentpage == totalpage){
+            console.log("已经是最后一页了!");
+        }else if(currentpage == (totalpage - 1)){
+            var sur = imgs.length % count;
+            var tmp1 = currentpage * count + 1;
+            var str = "";
+            console.log("剩余数:" + sur);
+            for(var i=0;i<sur;i++){
+                console.log("第几张：" + (tmp1+i));
+                str += "<img src=\"" + "img/" + (tmp1+i) + ".png\">";
+            }
+            currentpage += 1;
+            console.log(str);
+            document.getElementById("p1-img").innerHTML = str;
+           // $("#p1-img").append(str);
+        }else if(currentpage > 0){
+            var tmp = currentpage * count + 1;
+            console.log("tmp:" + tmp);
+            var str = "";
+            str += "<img src='" + "img/" + tmp + ".png'>";
+            str += "<img src='" + "img/" + (tmp+1) + ".png'>";
+            str += "<img src='" + "img/" + (tmp+2) + ".png'>";
+            str += "<img src='" + "img/" + (tmp+3) + ".png'>";
+            currentpage += 1;
+            document.getElementById("p1-img").innerHTML = str;
+           // $("#p1-img").append(str);
+        }
+    }
+    function firstpage() {
+        var str = "";
+        str += "<img src='" + "img/" + 1 + ".png'>";
+        str += "<img src='" + "img/" + 2 + ".png'>";
+        str += "<img src='" + "img/" + 3 + ".png'>";
+        str += "<img src='" + "img/" + 4 + ".png'>";
+        console.log(str);
+        //$("#p1-img").append(str);
+        return str;
+    }
+
+
+
+    window.onload = function() {
+        var a = firstpage();
+        document.getElementById("p1-img").innerHTML = a; //工作经历fistpage显示
+        document.getElementById("p1-img1").innerHTML = a; //教育经历fistpage显示
+        document.getElementById("p1-img2").innerHTML = a; //课程资源fistpage显示
+        document.getElementById("p1-img3").innerHTML = a; //教学研究fistpage显示
+      // $("#p1-img").innerHTML = a;
+
+
+    }
+//右侧menu菜单特效
+    //右侧的板块特效
+    $(window).scroll(function ()
+    {
+        var st = $(this).scrollTop();
+        // console.log(st);
+        if(st>=100){
+            document.getElementById("menu").style.marginTop= "-12px";
+        }else {
+            document.getElementById("menu").style.marginTop= "0px";
+        }
+    });
+
+
+    //教育经历的横向分页
+
+
+    //横向滑动条
+    $('#ex1').slider({
+        formatter: function(value) {
+            return 'Current value: ' + value;
+        }
+    });
+    //返回顶部
+    $(document).ready(function () {
+        $.goup({
+            trigger: 100,
+            bottomOffset: 30,  //距底部偏移量
+            locationOffset: 30,//距右边偏移量
+            title: 'This is a Demo',
+            titleAsText: false  //是否显示title
+        });
+    });
+
+</script>
+
+
+
+</body>
+
+
+
+
+</html>

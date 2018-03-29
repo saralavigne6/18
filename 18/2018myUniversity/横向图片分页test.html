@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        a {
+            cursor: pointer;
+        }
+        .p1 {
+            width: 410px; /* 可以去掉 */
+            height: 100px;
+            overflow-x: hidden;
+            white-space: nowrap;
+        }
+        .p2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<p class="p1" id="p1">
+
+</p>
+<a onclick="pre()">上一页</a>
+<a onclick="next()">下一页</a>
+<p class="p2">
+    <img src="images/1.jpg" alt="">
+    <img src="images/2.jpg" alt="">
+    <img src="images/3.jpg" alt="">
+    <img src="images/4.jpg" alt="">
+    <img src="images/5.jpg" alt="">
+    <img src="images/6.jpg" alt="">
+    <img src="images/7.jpg" alt="">
+</p>
+
+
+<script>
+    //显示id为 p1
+    function $(id) {
+        // var aaa = document.getElementById(id);
+        //console.log(aaa);
+        console.log("id"+id);
+        return document.getElementById(id);
+    }
+    //显示tag为 img
+    function $_tag(tag) {
+       // return document.getElementsByTagName(tag);
+       // var bbb = document.getElementById(tag);
+       // console.log(bbb);
+        console.log("tag"+tag);
+        return document.getElementsByTagName(tag);
+
+    }
+
+
+
+
+
+    //搞一个拼img标签的函数 传参数  for循环
+    //扩展、稳定、兼容、好用(简单)...
+    //<img src="images/7.jpg" alt="">
+    var count = 4;    // 每页的图片数目
+    var currentpage = 1;  //当前页数
+
+    var imgs = $_tag("img");
+    //console.log(imgs);  可以深入了解下
+    console.log("图片总数：" + imgs.length);
+    var totalpage = Math.ceil(imgs.length/count);
+    console.log("总页数：" + totalpage);
+    function pre() {
+        if(currentpage == 1){
+            console.log("已经是第一页了!");
+            return;
+        }else if(currentpage > 1){
+            var tmp = (currentpage - 2) * count + 1;
+            var str = "";
+            str += "<img src='" + "images/" + tmp + ".jpg'>";
+            str += "<img src='" + "images/" + (tmp+1) + ".jpg'>";
+            str += "<img src='" + "images/" + (tmp+2) + ".jpg'>";
+            str += "<img src='" + "images/" + (tmp+3) + ".jpg'>";
+            currentpage -= 1;
+            console.log(str);
+            $("p1").innerHTML = str;
+        }
+    }
+    function next() {
+        if(currentpage == totalpage){
+            console.log("已经是最后一页了!");
+        }else if(currentpage == (totalpage - 1)){
+            var sur = imgs.length % count;
+            var tmp1 = currentpage * count + 1;
+            var str = "";
+            console.log("剩余数:" + sur);
+            for(var i=0;i<sur;i++){
+                console.log("第几张：" + (tmp1+i));
+                str += "<img src=\"" + "images/" + (tmp1+i) + ".jpg\">";
+            }
+            currentpage += 1;
+            console.log(str);
+            $("p1").innerHTML = str;
+        }else if(currentpage > 0){
+            var tmp = currentpage * count + 1;
+            console.log("tmp:" + tmp);
+            var str = "";
+            str += "<img src='" + "images/" + tmp + ".jpg'>";
+            str += "<img src='" + "images/" + (tmp+1) + ".jpg'>";
+            str += "<img src='" + "images/" + (tmp+2) + ".jpg'>";
+            str += "<img src='" + "images/" + (tmp+3) + ".jpg'>";
+            currentpage += 1;
+            $("p1").innerHTML = str;
+        }
+    }
+    function firstpage() {
+        var str = "";
+        str += "<img src='" + "images/" + 1 + ".jpg'>";
+        str += "<img src='" + "images/" + 2 + ".jpg'>";
+        str += "<img src='" + "images/" + 3 + ".jpg'>";
+        str += "<img src='" + "images/" + 4 + ".jpg'>";
+        console.log(str);
+        $("p1").innerHTML = str;
+    }
+    window.onload = function() {
+        firstpage();
+    }
+</script>
+</body>
+</html>

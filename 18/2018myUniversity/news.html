@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>草稿箱</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link href="summernote.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fileinput.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script src="summernote.js"></script>
+</head>
+<body style="margin-top:50px;">
+<!--自适应菜单栏-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="row">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Brand"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- <ul class="nav navbar-nav">
+                     <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                     <li><a href="#">Link</a></li>
+                     <li class="dropdown">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                         <ul class="dropdown-menu">
+                             <li><a href="#">Action</a></li>
+                             <li><a href="#">Another action</a></li>
+                             <li><a href="#">Something else here</a></li>
+                             <li role="separator" class="divider"></li>
+                             <li><a href="#">Separated link</a></li>
+                             <li role="separator" class="divider"></li>
+                             <li><a href="#">One more separated link</a></li>
+                         </ul>
+                     </li>
+                 </ul>-->
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="搜索">
+                    </div>
+                    <button type="submit" class="btn btn-default">查询</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="loginIndex.html">主页</a></li>
+                    <li><a href="news.html">消息<span>(10)</span></a></li>
+                    <li><a href="ownPage.html">我</a></li>
+                    <li class="dropdown" id="down">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发文<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="writeArticle.html">发帖子</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="draftBox.html">草稿箱</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="down">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">拥护账户管理</a></li>
+                            <li><a href="#">个人信息增删改查</a></li>
+                            <li><a href="#">教学工作增删改查</a></li>
+                            <li><a href="#">科研工作增删改查</a></li>
+                            <li><a href="#">学术交流增删改查</a></li>
+                            <li><a href="#">活动获奖增删改查</a></li>
+                            <li><a href="#">经验分享增删改查</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">退出登录</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+</nav>
+<!--去除浮动-->
+<div class="clearfix"></div>
+
+<div class="container" style="width:97%;">
+    <div class="row">
+        <div class="col-md-12 draftBox-all" style="padding:0px;">
+            <div class="draftBox-top">
+                <!--草稿箱头部-->
+                <nav class="navbar" style="border-bottom: 1px solid #eaeaea;background-color:#f4f4f4;">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#"></a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                            <ul class="nav navbar-nav">
+
+                                <li type="button" data-toggle="modal" data-target="#reply"><a><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>&nbsp;&nbsp;回复消息</a></li>
+                                <li><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;&nbsp;删除</a></li>
+                            </ul>
+
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+            <div class="draftBox-content col-md-12">
+                <div class="left col-md-3">
+                    <div class="left-top">
+                        <div class="filter"><span>筛选器</span><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></div>
+                        <div class="board" id="board" style="display:none;">
+                            <ul>
+                                <li class="nav-Active">时间</li>
+                                <li style="border-bottom: 1px solid #666666;">大小</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="left-content">
+                        <ul>
+                            <li class="navActive">
+                                <div class="li-left">
+                                    <img src="img/7.png">
+                                </div>
+                                <div class="li-right">
+                                    <div class="right-top"><h4>朱超平评论了你</h4> </div>
+                                    <div class="date"><span>2018/3/16</span></div>
+                                    <div class="right-bottom"><h6>很厉害哦</h6></div>
+                                    <div class="clear" style="clear: both;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li-left">
+                                    <img src="img/7.png">
+                                </div>
+                                <div class="li-right">
+                                    <div class="right-top"><h4>梁新元点赞了你</h4> </div>
+                                    <div class="date"><span>2018/3/16</span></div>
+                                    <div class="right-bottom"><h6> </h6></div>
+                                    <div class="clear" style="clear: both;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li-left">
+                                    <img src="img/7.png">
+                                </div>
+                                <div class="li-right">
+                                    <div class="right-top"><h4>梁新元回复了你</h4> </div>
+                                    <div class="date"><span>2018/3/16</span></div>
+                                    <div class="right-bottom"><h6>不错，正是这样</h6></div>
+                                    <div class="clear" style="clear: both;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li-left">
+                                    <img src="img/7.png">
+                                </div>
+                                <div class="li-right">
+                                    <div class="right-top"><h4>谢川评论了你</h4> </div>
+                                    <div class="date"><span>2018/3/16</span></div>
+                                    <div class="right-bottom"><h6>这是我的正文正文正文正文正文正文正文正文正文正文正文</h6></div>
+                                    <div class="clear" style="clear: both;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li-left">
+                                    <img src="img/7.png">
+                                </div>
+                                <div class="li-right">
+                                    <div class="right-top"><h4>王韦力点赞了你的主页</h4> </div>
+                                    <div class="date"><span>2018/3/16</span></div>
+                                    <div class="right-bottom"><h6>35555555555555555</h6></div>
+                                    <div class="clear" style="clear: both;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li-left">
+                                    <img src="img/7.png">
+                                </div>
+                                <div class="li-right">
+                                    <div class="right-top"><h4>这是我的标题</h4> </div>
+                                    <div class="date"><span>2018/3/16</span></div>
+                                    <div class="right-bottom"><h6>这是我的正文正文正文正文正文正文正文正文正文正文正文</h6></div>
+                                    <div class="clear" style="clear: both;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li-left">
+                                    <img src="img/7.png">
+                                </div>
+                                <div class="li-right">
+                                    <div class="right-top"><h4>这是我的标题</h4> </div>
+                                    <div class="date"><span>2018/3/16</span></div>
+                                    <div class="right-bottom"><h6>这是我的正文正文正文正文正文正文正文正文正文正文正文</h6></div>
+                                    <div class="clear" style="clear: both;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li-left">
+                                    <img src="img/7.png">
+                                </div>
+                                <div class="li-right">
+                                    <div class="right-top"><h4>这是我的标题</h4> </div>
+                                    <div class="date"><span>2018/3/16</span></div>
+                                    <div class="right-bottom"><h6>这是我的正文正文正文正文正文正文正文正文正文正文正文</h6></div>
+                                    <div class="clear" style="clear: both;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li-left">
+                                    <img src="img/7.png">
+                                </div>
+                                <div class="li-right">
+                                    <div class="right-top"><h4>这是我的标题</h4> </div>
+                                    <div class="date"><span>2018/3/16</span></div>
+                                    <div class="right-bottom"><h6>这是我的正文正文正文正文正文正文正文正文正文正文正文</h6></div>
+                                    <div class="clear" style="clear: both;"></div>
+                                </div>
+                            </li>
+
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="right col-md-9" style="padding:0px;">
+                    <div class="right-head">
+                        <span>被评论或者点赞文章的标题题标题</span>
+                    </div>
+                    <div class="right-content">
+                            文章内容文章内容
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--弹出的框，回复开始   开始开始开始开始开始              -->
+<div class="modal fade" id="reply" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">回复消息</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">@梁新元</label>
+                        <input type="text" class="form-control" id="projectName">
+                    </div>
+                </form>
+                <form id="form3" action="" method="post" enctype="multipart/form-data">
+                <div class="row form-group">
+                    <div class="panel panel-primary" style="border-color:white;">
+
+                        <div class=" ">
+                            <div class="col-sm-12">
+                                <label for="message-text" class="control-label">上传图片</label>
+                                <input id="input-id" name="file" multiple type="file" data-show-caption="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框，回复结束  -->
+<script type="text/javascript" src="js/fileinput.min.js"></script>
+<script type="text/javascript" src="js/fileinput_locale_zh.js"></script>
+
+
+<script>
+    $(".draftBox-content .left .left-content ul li").on('click',function(){
+        $(".draftBox-content .left .left-content ul li").removeClass("navActive");
+        $(this).addClass("navActive");//增加class,变颜色的class;
+        $(".draftBox-content .left .left-content ul .navActive").style.borderLeftColor="white";
+    });
+
+    $(".draftBox-content .left .left-top .filter").on("click",function () {
+        var a = document.getElementById("board").style.display;
+        if(a=="none"){
+            document.getElementById("board").style.display="block";
+        }else{
+            document.getElementById("board").style.display="none";
+        }
+    });
+    $(".draftBox-content .left .left-top .board ul li").on('click',function(){
+        $(".draftBox-content .left .left-top .board ul li").removeClass("nav-Active");
+        $(this).addClass("nav-Active");//增加class,变颜色的class;
+        document.getElementById("board").style.display="none";
+
+    });
+    //上传图片插件
+    $(function () {
+        initFileInput("input-id");
+    })
+
+    function initFileInput(ctrlName) {
+        var control = $('#' + ctrlName);
+        control.fileinput({
+            language: 'zh', //设置语言
+            uploadUrl: "", //上传的地址
+            allowedFileExtensions: ['jpg', 'gif', 'png','doc','docx','pdf','ppt','pptx','txt'],//接收的文件后缀
+            maxFilesNum : 5,//上传最大的文件数量
+            //uploadExtraData:{"id": 1, "fileName":'123.mp3'},
+            uploadAsync: true, //默认异步上传
+            showUpload: true, //是否显示上传按钮
+            showRemove : true, //显示移除按钮
+            showPreview : true, //是否显示预览
+            showCaption: false,//是否显示标题
+            browseClass: "btn btn-primary", //按钮样式
+            //dropZoneEnabled: true,//是否显示拖拽区域
+            //minImageWidth: 50, //图片的最小宽度
+            //minImageHeight: 50,//图片的最小高度
+            //maxImageWidth: 1000,//图片的最大宽度
+            //maxImageHeight: 1000,//图片的最大高度
+            maxFileSize: 0,//单位为kb，如果为0表示不限制文件大小
+            //minFileCount: 0,
+            //maxFileCount: 10, //表示允许同时上传的最大文件个数
+            enctype: 'multipart/form-data',
+            validateInitialCount:true,
+            previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+            msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+
+        }).on('filepreupload', function(event, data, previewId, index) {     //上传中
+            var form = data.form, files = data.files, extra = data.extra,
+                response = data.response, reader = data.reader;
+            console.log('文件正在上传');
+        }).on("fileuploaded", function (event, data, previewId, index) {    //一个文件上传成功
+            console.log('文件上传成功！'+data.id);
+
+        }).on('fileerror', function(event, data, msg) {  //一个文件上传失败
+            console.log('文件上传失败！'+data.id);
+        })
+    }
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
